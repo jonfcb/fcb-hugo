@@ -1,0 +1,18 @@
+{{ $main := resources.Get "js/main.js" }}
+{{ $bootstrap := resources.Get "js/vendor/bootstrap.min.js" }}
+{{ $jquery := resources.Get "js/vendor/jquery.min.js" }}
+{{ $modernizr := resources.Get "js/vendor/modernizr.min.js" }}
+{{ $popper := resources.Get "js/vendor/popper.min.js" }}
+{{ $counterup := resources.Get "js/plugins/counterup.min.js" }}
+{{ $lgvideo := resources.Get "js/plugins/lgvideo.min.js" }}
+{{ $lightgallery := resources.Get "js/plugins/lightgallery.min.js" }}
+{{ $swiper := resources.Get "js/plugins/swiper.min.js" }}
+{{ $waypoints := resources.Get "js/plugins/waypoints.min.js" }}
+
+{{ $script := slice $jquery $bootstrap $modernizr $popper $counterup $lightgallery $lgvideo $swiper $waypoints $main | resources.Concat "js/bundle.js" }}
+{{ if hugo.IsProduction }}
+{{ $script := $script | minify | fingerprint }}
+<script src="{{ $script.RelPermalink }}" integrity="{{ $script.Data.Integrity }}"></script>
+{{ else }}
+<script src="{{ $script.RelPermalink }}"></script>
+{{ end }}

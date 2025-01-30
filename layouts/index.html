@@ -1,0 +1,313 @@
+{{ define "main" }}
+<body>
+    <!--  hero slider area -->
+    {{ with .Params.hero_section }}
+    {{ if .enable }}
+    <div class="hero-alider-area">
+        <div class="hero-slider__container-area">
+            <div class="swiper-container hero-slider__container">
+                {{ with .slides }}
+                <div class="swiper-wrapper hero-slider__wrapper">
+                    <!--=======  single slider item  =======-->
+                    {{ range . }}
+                    <div class="swiper-slide hero-slider__single-item bg-img" data-bg="{{ .image | relURL }}">
+                        <div class="hero-slider__content-wrapper">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <div class="hero-slider__content">
+                                            {{ with .heading }}
+                                            <h2 class="hero-slider__title">{{ . }}</h2>
+                                            {{ end }}
+                                            {{ with .details }}
+                                            <p class="hero-slider__text">{{ . }}</p>
+                                            {{ end }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                    <!--=======  End of single slider item  =======-->
+                </div>
+                {{ end }}
+            </div>
+            <div class="ht-swiper-button-prev ht-swiper-button-prev-13 ht-swiper-button-nav d-none d-xl-flex justify-content-center align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+            </div>
+            <div class="ht-swiper-button-next ht-swiper-button-next-13 ht-swiper-button-nav d-none d-xl-flex justify-content-center align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15"><path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+    {{ end }}
+    <!--  End of hero slider area  -->
+    <!--  service grid slider area -->
+    <div class="service-grid-slider-area section-space--inner--120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area text-center">
+                        <h2 class="section-title section-space--bottom--50">Our Services <span class="title-icon"></span></h2>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="service-item-wrapper">
+                        <div class="row">
+                            {{ with where site.RegularPages "Type" "favourite" }}
+                            {{ range . }}
+                            <div class="col-lg-4 col-md-6 col-12 section-space--bottom--30">
+                                <div class="service-grid-item">
+                                    {{ with .Params.cover }}
+                                    <div class="service-grid-item__image">
+                                        <div class="service-grid-item__image-wrapper">
+                                            <a href="{{ .Page.Permalink }}">
+                                                <img width="370" height="237" src='{{ . | relURL }}' class="img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    {{ end }}
+                                    <div class="service-grid-item__content">
+                                        <h3 class="title">
+                                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                        </h3>
+                                        <p class="subtitle">{{ .Description }}</p>
+                                        <a href="{{ .Permalink }}" class="see-more-link">SEE MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ end }}
+                            {{ end }}
+                            <div class="d-flex justify-content-center align-items-center section-space--top--30">
+                                <a href="/services/" class="ht-btn ht-btn--round">View All</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  End of service grid slider area  -->
+    <!--  fun fact area -->
+    {{ with .Params.stats_section }}
+    {{ if .enable }}
+    <div class="funfact-section section-space--inner--100 bg-img" data-bg='{{ "images/dev/stats-bg.jpg" | relURL }}'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="fun-fact-wrapper">
+                        <div class="row">
+                            {{ with .stats }}
+                            {{ range . }}
+                            <div class="single-fact col-md-3 col-6 section-space--bottom--30">
+                                <img width="60" height="60" src="{{ .icon | relURL }}" alt="">
+                                <h1 class="counter">{{ .count }}</h1>
+                                <h4>{{ .name }}</h4>
+                            </div>
+                            {{ end }}
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+    {{ end }}
+    <!--  End of fun fact area  -->
+    <!--  video cta area -->
+    {{ with .Params.about_section }}
+    {{ if .enable }}
+    <div class="video-cta-area section-space--inner--120">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-12">
+                    <div class="video-cta-content">
+                        <h4 class="video-cta-content__small-title">{{ .pretitle }}</h4>
+                        <h3 class="video-cta-content__title">{{ .heading }}</h3>
+                        <p class="video-cta-content__text">{{ .details | safeHTML }}</p>
+                        {{ with .button }}
+                        <a href="{{ .link }}" class="ht-btn ht-btn--round">{{ .label }}</a>
+                        {{ end }}
+                    </div>
+                </div>
+                <div class="col-lg-5 offset-lg-1 col-md-12">
+                    <div class="cta-video-image">
+                        <div class="cta-video-image__image">
+                            <img src='{{ "images/dev/about-bg.jpg" | relURL }}' class="img-fluid" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+    {{ end }}
+    <!--  End of video cta area  -->
+    <!--  testimonial slider area -->
+    {{ with .Params.testimonial_section }}
+    {{ if .enable }}
+    <div class="testimonial-slider-area testimonial-slider-area-bg section-space--inner--120 bg-img" data-bg='{{ "images/dev/testimonial-bg.webp" | relURL }}'>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 m-auto">
+                    <div class="testimonial-slider">
+                        <div class="testimonial-slider__container-area">
+                            <div class="swiper-container testimonial-slider__container">
+                                <div class="swiper-wrapper testimonial-slider__wrapper">
+                                    {{ range .testimonials }}
+                                    <div class="swiper-slide testimonial-slider__single-slide">
+                                        <div class="author">
+                                            {{ with .image }}
+                                            <div class="author__image">
+                                                <img width="100" height="100" src="{{ . | relURL }}" alt="">
+                                            </div>
+                                            {{ end }}
+                                            {{ with .name }}
+                                            <div class="author__details">
+                                                <h4 class="name">{{ . }}</h4>
+                                            </div>
+                                            {{ end }}
+                                        </div>
+                                        <div class="content"> 
+                                            <i>“{{ .message }}”</i>
+                                        </div>
+                                    </div>
+                                    {{ end }}
+                                </div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination-3"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{ end }}
+    {{ end }}
+    <!--  End of testimonial slider area  -->
+    <!--  project slider area -->
+    <div class="project-slider-area grey-bg section-space--inner--120">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- section title -->
+                    <div class="section-title-area text-center">
+                        <h2 class="section-title section-space--bottom--50">Latest Projects <span class="title-icon"></span></h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="latest-project-slider">
+                        <div class="latest-project-slider__container-area">
+                            <div class="swiper-container latest-project-slider__container">
+                                <div class="swiper-wrapper latest-project-slider__wrapper">
+                                    <div class="swiper-slide latest-project-slider__single-slide">
+                                        <div class="row row-30 align-items-center">
+                                            <div class="col-lg-6">
+                                                <div class="image">
+                                                    <img width="639" height="395" src="assets/img/projects/1.webp" class="img-fluid" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="content">
+                                                    <h3 class="count">01</h3>
+                                                    <h2 class="title">Construction Management</h2>
+                                                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                                                    <a href="project-details.html" class="see-more-link see-more-link--color">VIEW MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide latest-project-slider__single-slide">
+                                        <div class="row row-30 align-items-center">
+                                            <div class="col-lg-6">
+                                                <div class="image">
+                                                    <img width="639" height="395" src="assets/img/projects/1.webp" class="img-fluid" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="content">
+                                                    <h3 class="count">02</h3>
+                                                    <h2 class="title">Power and Energy</h2>
+                                                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                                                    <a href="project-details.html" class="see-more-link see-more-link--color">VIEW MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide latest-project-slider__single-slide">
+                                        <div class="row row-30 align-items-center">
+                                            <div class="col-lg-6">
+                                                <div class="image">
+                                                    <img width="639" height="395" src="assets/img/projects/1.webp" class="img-fluid" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="col-lg-6">
+                                                <div class="content">
+                                                    <h3 class="count">03</h3>
+                                                    <h2 class="title">Work Management</h2>
+                                                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
+                                                    <a href="project-details.html" class="see-more-link see-more-link--color">VIEW MORE</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ht-swiper-button-prev ht-swiper-button-prev-16 ht-swiper-button-nav">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="10"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+                            </div>
+                            <div class="ht-swiper-button-next ht-swiper-button-next-16 ht-swiper-button-nav">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="10"><path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  End of project slider area  -->
+    <!--  team job area -->
+    <div class="team-job-area section-space--inner--120">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="team-job__content">
+                        <div class="team-job__title-wrapper">
+                            <h2 class="team-job__title">Meet Our <br> Honorable Employees.</h2>
+                                <a href="#" class="see-more-link see-more-link--color">Meet Our Team</a>
+                        </div>
+
+                        <div class="team-job__content-wrapper">
+                            <h2 class="team-job__title">Open Job <span><a href="#" class="see-more-link see-more-link--color">VIEW ALL JOBS</a></span></h2>
+                            <div class="team-job__list-wrapper">
+                                <div class="team-job__single">
+                                    <h3 class="title"> <a href="#">Warehouse General Laborer</a></h3>
+                                    <p class="text">here are many variations of passages</p>
+                                </div>
+                                <div class="team-job__single">
+                                    <h3 class="title"> <a href="#">General Factory Worker</a></h3>
+                                    <p class="text">here are many variations of passages</p>
+                                </div>
+                                <div class="team-job__single">
+                                    <h3 class="title"> <a href="#">Production Weekender</a></h3>
+                                    <p class="text">here are many variations of passages</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="team-job__image text-center">
+                        <img width="489" height="719" src="assets/img/team/team.webp" class="img-fluid" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  End of team job area  -->
+{{ end }}

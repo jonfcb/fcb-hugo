@@ -1,0 +1,54 @@
+baseURL: 'https://example.org/'
+languageCode: 'en-us'
+title: 'My New Hugo Site'
+
+menus:
+  main:
+    - name: 'Home'
+      url: '/'
+      weight: 10
+    - name: 'Services'
+      url: '/services/'
+      weight: 20
+    - name: 'Projects'
+      url: '/projects/'
+      weight: 30
+    - name: 'Contact Us'
+      url: '/contact/'
+      weight: 40
+
+  services:
+    - name: 'Landscaping'
+      url: '/'
+      weight: 10
+    - name: 'Porcelan Ratio'
+      url: '/'
+      weight: 20
+    - name: 'Garden Wall'
+      url: '/'
+      weight: 30
+    - name: 'House Extensions'
+      url: '/'
+      weight: 40
+
+  links:
+    - name: 'Services'
+      url: '/services/'
+      weight: 10
+    - name: 'Contact Us'
+      url: '/'
+      weight: 20
+    - name: 'Projects'
+      url: '/'
+      weight: 30
+    - name: 'Reviews'
+      url: '/'
+      weight: 40
+
+params:
+  info:
+    logo: 'images/logo.png'
+    number: '+447472801506'
+    text: 'First Choice Builders are committed to meeting the highest quality standards without compromising our safety culture.'
+    #address: 'your address' #please remove '#' before the word 'address' and put the address to show live
+    email: 'info@firstchoice-builders.co.uk' 

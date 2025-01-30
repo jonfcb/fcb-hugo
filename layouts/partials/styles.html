@@ -1,0 +1,9 @@
+{{ $main := resources.Get "css/style.css" }}
+{{ $bootstrap := resources.Get "css/bootstrap.min.css" }}
+{{ $animate := resources.Get "css/plugins/animate.min.css" }}
+{{ $lightgallery := resources.Get "css/plugins/lightgallery.min.css" }}
+{{ $swiper := resources.Get "css/plugins/swiper.min.css" }}
+
+{{ $styles := slice $main $bootstrap $animate $lightgallery $swiper | resources.Concat "css/bundle.css" }}
+{{ $styles := $styles | minify }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">

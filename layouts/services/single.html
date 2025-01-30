@@ -1,0 +1,45 @@
+{{ define "main" }}
+<!--====================  breadcrumb area ====================-->
+{{ partial "hero.html" . }}
+<!--====================  End of breadcrumb area  ====================-->
+<div class="page-wrapper">
+    <!--Service section start-->
+    <div class="service-section">
+        <div class="container section-space--top--30 section-space--bottom--30">
+            <div class="row">
+
+                <div class="col-lg-8 col-12 order-1 order-lg-2">
+
+                    <div class="service-details">
+
+                        
+                        <div class="content">
+                            {{ .Content }}
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-4 col-12 order-2 order-lg-1">
+
+                    <div class="sidebar">
+                        <h3 class="sidebar-title">Services</h3>
+
+                        <ul class="sidebar-list">
+                            {{ range where site.RegularPages "Section" "services" }}
+                            <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+                            {{ end }}
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!--Service section end-->
+</div>
+{{ end }}
