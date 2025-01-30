@@ -1,7 +1,6 @@
 ---
 title: 'House Extensions'
 description: 'First Choice Builders is here to turn your vision into reality through our expert house extension services.'
-type: favourite
 ---
 
 ### Why Choose First Choice Builders for Your House Extension:

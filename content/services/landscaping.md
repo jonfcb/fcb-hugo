@@ -1,7 +1,6 @@
 ---
 title: 'Landscaping'
 description: 'From the initial design to completion, we ensure every detail is perfect to create the outdoor space of your dreams.'
-type: favourite
 ---
 
 ### Why Choose First Choice Builders for Your Landscaping:
