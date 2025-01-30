@@ -1,6 +1,6 @@
 baseURL: 'https://example.org/'
 languageCode: 'en-us'
-title: 'My New Hugo Site'
+title: 'First Choice Builders'
 
 menus:
   main:
@@ -36,13 +36,13 @@ menus:
       url: '/services/'
       weight: 10
     - name: 'Contact Us'
-      url: '/'
+      url: '/contact/'
       weight: 20
     - name: 'Projects'
-      url: '/'
+      url: '/projects/'
       weight: 30
     - name: 'Reviews'
-      url: '/'
+      url: '/#testimonials'
       weight: 40
 
 params:
@@ -50,5 +50,5 @@ params:
     logo: 'images/logo.png'
     number: '+447472801506'
     text: 'First Choice Builders are committed to meeting the highest quality standards without compromising our safety culture.'
-    #address: 'your address' #please remove '#' before the word 'address' and put the address to show live
+    address: '59 Anderson Avenue Anderson Avenue, Earley, Reading, England, RG6 1HD'
     email: 'info@firstchoice-builders.co.uk' 

@@ -1,0 +1,46 @@
+{{ define "main" }}
+    <!--====================  breadcrumb area ====================-->
+    {{ partial "hero.html" . }}
+    <!--====================  End of breadcrumb area  ====================-->
+    <div class="page-wrapper section-space--inner--120">
+        <!--Projects section start-->
+        <div class="project-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="project-item-wrapper">
+                            <div class="row">
+                                {{ range .Pages.ByDate }}
+                                {{ $link := .Permalink }}
+                                {{ $title := .Title }}
+                                <div class="col-lg-4 col-sm-6 col-12 section-space--bottom--30">
+                                    <div class="service-grid-item service-grid-item--style2">
+                                        {{ with .Params.cover }}
+                                        <div class="service-grid-item__image">
+                                            <div class="service-grid-item__image-wrapper">
+                                                <a href="{{ $link }}">
+                                                    <img width="370" height="150" src="{{ . | relURL }}" class="img-fluid" alt="{{ $title }} {{ site.Title }}">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        {{ end }}
+                                        <div class="service-grid-item__content">
+                                            <h3 class="title">
+                                                <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                            </h3>
+                                            <p class="subtitle">{{ .Description | truncate 70 }}</p>
+                                            <a href="{{ .Permalink }}" class="see-more-link">SEE MORE</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--Projects section end-->
+    </div>
+{{ end }}

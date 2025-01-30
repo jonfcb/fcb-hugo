@@ -5,6 +5,9 @@
 
                 <div class="page-banner text-center">
                     <h1>{{ .Title }}</h1>
+                    {{ with .Description }}
+                    <p class="hero-slider__text">{{ . }}</p>
+                    {{ end }}
                 </div>
 
             </div>

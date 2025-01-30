@@ -34,10 +34,10 @@
                 {{ end }}
             </div>
             <div class="ht-swiper-button-prev ht-swiper-button-prev-13 ht-swiper-button-nav d-none d-xl-flex justify-content-center align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="10"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
             </div>
             <div class="ht-swiper-button-next ht-swiper-button-next-13 ht-swiper-button-nav d-none d-xl-flex justify-content-center align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="15"><path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="10"><path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
             </div>
         </div>
     </div>
@@ -149,7 +149,7 @@
     <!--  testimonial slider area -->
     {{ with .Params.testimonial_section }}
     {{ if .enable }}
-    <div class="testimonial-slider-area testimonial-slider-area-bg section-space--inner--120 bg-img" data-bg='{{ "images/dev/testimonial-bg.webp" | relURL }}'>
+    <div class="testimonial-slider-area testimonial-slider-area-bg section-space--inner--120 bg-img" style="scroll-margin-top: 300px;" data-bg='{{ "images/dev/testimonial-bg.webp" | relURL }}' id="testimonials">
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 m-auto">
@@ -205,57 +205,28 @@
                         <div class="latest-project-slider__container-area">
                             <div class="swiper-container latest-project-slider__container">
                                 <div class="swiper-wrapper latest-project-slider__wrapper">
+                                    {{ range $i, $p := where site.RegularPages "Section" "projects" }}
+                                    {{ $title := .Title }}
                                     <div class="swiper-slide latest-project-slider__single-slide">
                                         <div class="row row-30 align-items-center">
+                                            {{ with .Params.cover }}
                                             <div class="col-lg-6">
                                                 <div class="image">
-                                                    <img width="639" height="395" src="assets/img/projects/1.webp" class="img-fluid" alt="">
+                                                    <img width="639" height="395" src="{{ . | relURL }}" class="img-fluid" alt="{{ $title }} {{ site.Title }}">
                                                 </div>
                                             </div>
+                                            {{ end }}
                                             <div class="col-lg-6">
                                                 <div class="content">
-                                                    <h3 class="count">01</h3>
-                                                    <h2 class="title">Construction Management</h2>
-                                                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
-                                                    <a href="project-details.html" class="see-more-link see-more-link--color">VIEW MORE</a>
+                                                    <h3 class="count">{{ add $i 1 }}</h3>
+                                                    <h2 class="title">{{ $title }}</h2>
+                                                    <p class="desc">{{ .Description }}</p>
+                                                    <a href="{{ .Permalink }}" class="see-more-link see-more-link--color">VIEW MORE</a>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="swiper-slide latest-project-slider__single-slide">
-                                        <div class="row row-30 align-items-center">
-                                            <div class="col-lg-6">
-                                                <div class="image">
-                                                    <img width="639" height="395" src="assets/img/projects/1.webp" class="img-fluid" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="content">
-                                                    <h3 class="count">02</h3>
-                                                    <h2 class="title">Power and Energy</h2>
-                                                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
-                                                    <a href="project-details.html" class="see-more-link see-more-link--color">VIEW MORE</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide latest-project-slider__single-slide">
-                                        <div class="row row-30 align-items-center">
-                                            <div class="col-lg-6">
-                                                <div class="image">
-                                                    <img width="639" height="395" src="assets/img/projects/1.webp" class="img-fluid" alt="">
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <div class="content">
-                                                    <h3 class="count">03</h3>
-                                                    <h2 class="title">Work Management</h2>
-                                                    <p class="desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim</p>
-                                                    <a href="project-details.html" class="see-more-link see-more-link--color">VIEW MORE</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    {{ end }}
                                 </div>
                             </div>
                             <div class="ht-swiper-button-prev ht-swiper-button-prev-16 ht-swiper-button-nav">
@@ -271,6 +242,8 @@
         </div>
     </div>
     <!--  End of project slider area  -->
+    {{ with .Params.team_section }}
+    {{ if .enable }}
     <!--  team job area -->
     <div class="team-job-area section-space--inner--120">
         <div class="container">
@@ -309,5 +282,7 @@
             </div>
         </div>
     </div>
+    {{ end }}
+    {{ end }}
     <!--  End of team job area  -->
 {{ end }}

@@ -1,0 +1,35 @@
+{{ define "main" }}
+<!--====================  breadcrumb area ====================-->
+{{ partial "hero.html" . }}
+<!--====================  End of breadcrumb area  ====================-->
+<div class="page-wrapper section-space--inner--120">
+    <!--Projects section start-->
+    <div class="project-section">
+        <div class="container">
+            <div class="row">
+                {{ with .Params.cover }}
+                <div class="col-12 d-flex justify-content-center section-space--bottom--40">
+                    <div class="project-image"><img width="1170" height="439" src="{{ . | relURL }}" class="img-fluid" alt="{{ $.Title }} {{ site.Title }}"></div>
+                </div>
+                {{ end }}
+                {{ with .Params.info }}
+                <div class="col-lg-4 col-12 section-space--bottom--30">
+                    <div class="project-information">
+                        <h3>Project Information</h3>
+                        <ul>
+                            {{ range .detail }}
+                            <li><strong>{{ .key }}:</strong>{{ .value | safeHTML }}</li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+                {{ end }}
+                <div class="content col-12 section-space--bottom--40">
+                    {{ .Content }}
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Projects section end-->
+</div>
+{{ end }}

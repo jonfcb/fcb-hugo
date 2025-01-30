@@ -55,7 +55,7 @@
 }
 
 .lg-actions .lg-next:before {
-    content: "\e095"
+    content: "\000BB"
 }
 
 .lg-actions .lg-prev {
@@ -63,7 +63,7 @@
 }
 
 .lg-actions .lg-prev:after {
-    content: "\e094"
+    content: "\000AB"
 }
 
 @-webkit-keyframes lg-right-end {
@@ -182,7 +182,7 @@
     outline: 0;
     -webkit-transition: color .2s linear;
     -o-transition: color .2s linear;
-    transition: color .2s linear
+    transition: color .2s linear;
 }
 
 .lg-toolbar .lg-icon:hover {
@@ -190,11 +190,13 @@
 }
 
 .lg-toolbar .lg-close:after {
-    content: "\e070"
+    content: "\00d7"
 }
 
 .lg-toolbar .lg-download:after {
-    content: "\e0f2"
+    content: "\02913";
+    height: 10px;
+    display: block;
 }
 
 .lg-sub-html {
