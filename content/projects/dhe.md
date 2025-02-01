@@ -1,7 +1,7 @@
 ---
 title: Detached House Extension and Renovation
 description: This project highlights the design and construction of a substantial extension and renovation for a detached family home.
-cover: 'images/projects/dhe/dhe-5.jpg'
+cover: 'images/projects/dh-e/dh-e-5.jpg'
 ---
 
 This project highlights the design and construction of a substantial extension and renovation for a detached family home. Below is a detailed description of the transformation process:
@@ -25,14 +25,14 @@ The exterior landscaping and driveway will be finalized to create a seamless ent
 This comprehensive extension and renovation have significantly increased the home’s footprint and modernized its appearance, offering enhanced functionality and curb appeal.
 
 {{< gallery >}}
-{{< gallery-item image="images/projects/dhe/dhe-1.jpg" >}}
-{{< gallery-item image="images/projects/dhe/dhe-2.jpg" >}}
-{{< gallery-item image="images/projects/dhe/dhe-3.jpg" >}}
-{{< gallery-item image="images/projects/dhe/dhe-4.jpg" >}}
-{{< gallery-item image="images/projects/dhe/dhe-5.jpg" >}}
-{{< gallery-item image="images/projects/dhe/dhe-6.jpg" >}}
-{{< gallery-item image="images/projects/dhe/dhe-7.jpg" >}}
-{{< gallery-item image="images/projects/dhe/dhe-8.jpg" >}}
-{{< gallery-item image="images/projects/dhe/dhe-9.jpg" >}}
-{{< gallery-item image="images/projects/dhe/dhe-10.jpg" >}}
+{{< gallery-item image="images/projects/dh-e/dh-e-1.jpg" >}}
+{{< gallery-item image="images/projects/dh-e/dh-e-2.jpg" >}}
+{{< gallery-item image="images/projects/dh-e/dh-e-3.jpg" >}}
+{{< gallery-item image="images/projects/dh-e/dh-e-4.jpg" >}}
+{{< gallery-item image="images/projects/dh-e/dh-e-5.jpg" >}}
+{{< gallery-item image="images/projects/dh-e/dh-e-6.jpg" >}}
+{{< gallery-item image="images/projects/dh-e/dh-e-7.jpg" >}}
+{{< gallery-item image="images/projects/dh-e/dh-e-8.jpg" >}}
+{{< gallery-item image="images/projects/dh-e/dh-e-9.jpg" >}}
+{{< gallery-item image="images/projects/dh-e/dh-e-10.jpg" >}}
 {{< /gallery >}}
