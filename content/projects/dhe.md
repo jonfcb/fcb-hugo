@@ -2,6 +2,7 @@
 title: Detached House Extension and Renovation
 description: This project highlights the design and construction of a substantial extension and renovation for a detached family home.
 cover: 'images/projects/dh-e/dh-e-5.jpg'
+draft: true
 ---
 
 This project highlights the design and construction of a substantial extension and renovation for a detached family home. Below is a detailed description of the transformation process:
