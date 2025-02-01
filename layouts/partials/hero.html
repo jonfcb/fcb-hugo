@@ -1,11 +1,11 @@
-<div class="breadcrumb-area bg-img" data-bg='{{ "images/dev/stats-bg.jpg" | relURL }}'>
+<div class="breadcrumb-area bg-img" data-bg='{{ default "images/dev/stats-bg.jpg" .Params.cover | relURL }}'>
     <div class="container">
         <div class="row">
             <div class="col">
 
                 <div class="page-banner text-center">
                     <h1>{{ .Title }}</h1>
-                    {{ with .Description }}
+                    {{ with .Params.subtitle }}
                     <p class="hero-slider__text">{{ . }}</p>
                     {{ end }}
                 </div>

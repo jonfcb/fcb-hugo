@@ -5,21 +5,23 @@
     {{ if .enable }}
     <div class="hero-alider-area">
         <div class="hero-slider__container-area">
-            <div class="swiper-container hero-slider__container">
-                {{ with .slides }}
-                <div class="swiper-wrapper hero-slider__wrapper">
+            <div class="hero-slider__container">
+                {{ with .details }}
+                <div class="hero-slider__wrapper">
                     <!--=======  single slider item  =======-->
-                    {{ range . }}
-                    <div class="swiper-slide hero-slider__single-item bg-img" data-bg="{{ .image | relURL }}">
+                    <div class="hero-slider__single-item bg-img" data-bg="{{ .image | relURL }}">
                         <div class="hero-slider__content-wrapper">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="hero-slider__content">
                                             {{ with .heading }}
-                                            <h2 class="hero-slider__title">{{ . }}</h2>
+                                            <h1 class="hero-slider__title">{{ . }}</h1>
                                             {{ end }}
-                                            {{ with .details }}
+                                            {{ with .subheading }}
+                                            <h2 style="color: #E11A22;">{{ . }}</h2>
+                                            {{ end }}
+                                            {{ with .text }}
                                             <p class="hero-slider__text">{{ . }}</p>
                                             {{ end }}
                                         </div>
@@ -28,68 +30,47 @@
                             </div>
                         </div>
                     </div>
-                    {{ end }}
                     <!--=======  End of single slider item  =======-->
                 </div>
                 {{ end }}
             </div>
-            <div class="ht-swiper-button-prev ht-swiper-button-prev-13 ht-swiper-button-nav d-none d-xl-flex justify-content-center align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="10"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
-            </div>
-            <div class="ht-swiper-button-next ht-swiper-button-next-13 ht-swiper-button-nav d-none d-xl-flex justify-content-center align-items-center">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="10"><path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
-            </div>
         </div>
     </div>
-    {{ end }}
-    {{ end }}
     <!--  End of hero slider area  -->
-    <!--  service grid slider area -->
-    <div class="service-grid-slider-area section-space--inner--120">
+    <!--Feature section start-->
+    {{ with .features }}
+    <div class="feature-section section-space--inner--100 grey-bg">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title-area text-center">
-                        <h2 class="section-title section-space--bottom--50">Our Services <span class="title-icon"></span></h2>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="service-item-wrapper">
-                        <div class="row">
-                            {{ with where site.RegularPages "Section" "services" }}
-                            {{ range first 3 . }}
-                            <div class="col-lg-4 col-md-6 col-12 section-space--bottom--30">
-                                <div class="service-grid-item">
-                                    {{ with .Params.cover }}
-                                    <div class="service-grid-item__image">
-                                        <div class="service-grid-item__image-wrapper">
-                                            <a href="{{ .Page.Permalink }}">
-                                                <img width="370" height="237" src='{{ . | relURL }}' class="img-fluid" alt="">
-                                            </a>
-                                        </div>
-                                    </div>
-                                    {{ end }}
-                                    <div class="service-grid-item__content">
-                                        <h3 class="title">
-                                            <a href="{{ .Permalink }}">{{ .Title }}</a>
-                                        </h3>
-                                        <p class="subtitle">{{ .Description }}</p>
-                                        <a href="{{ .Permalink }}" class="see-more-link">SEE MORE</a>
-                                    </div>
-                                </div>
-                            </div>
-                            {{ end }}
-                            {{ end }}
-                            <div class="d-flex justify-content-center align-items-center section-space--top--30">
-                                <a href="/services/" class="ht-btn ht-btn--round">View All</a>
+            <div class="col-lg-12">
+                <div class="feature-item-wrapper">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title-area text-center">
+                                <h2 class="section-title section-space--bottom--50">Why Choose Us? <span class="title-icon"></span></h2>
                             </div>
                         </div>
+                        {{ range . }}
+                        <div class="col-lg-4 col-md-6 col-12 section-space--bottom--30">
+                            <div class="feature">
+                                <div class="icon">
+                                    <img width="49" height="48" src="{{ .icon | relURL }}" class="img-fluid" alt="{{ site.Title }}">
+                                </div>
+                                <div class="content">
+                                    <h3>{{ .title }}</h3>
+                                    <p>{{ .details }}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {{ end }}
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!--  End of service grid slider area  -->
+    {{ end }}
+    {{ end }}
+    {{ end }}
+    <!--Feature section end-->
     <!--  fun fact area -->
     {{ with .Params.stats_section }}
     {{ if .enable }}
@@ -122,15 +103,12 @@
     {{ if .enable }}
     <div class="video-cta-area section-space--inner--120">
         <div class="container">
-            <div class="row align-items-center">
+            <div class="row align-items-center section-space--bottom--50">
                 <div class="col-lg-6 col-md-12">
                     <div class="video-cta-content">
                         <h4 class="video-cta-content__small-title">{{ .pretitle }}</h4>
                         <h3 class="video-cta-content__title">{{ .heading }}</h3>
                         <p class="video-cta-content__text">{{ .details | safeHTML }}</p>
-                        {{ with .button }}
-                        <a href="{{ .link }}" class="ht-btn ht-btn--round">{{ .label }}</a>
-                        {{ end }}
                     </div>
                 </div>
                 <div class="col-lg-5 offset-lg-1 col-md-12">
@@ -141,11 +119,124 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area">
+                        <h4 class="section-space--bottom--30" style="color: #E11A22;">Building Trust, One Brick at a Time</h4>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <p class="subtitle">
+                        From our first project to our most ambitious buildings today, we’ve always prioritized quality, transparency, and innovation. Our team of skilled builders, designers, and landscapers work stogether to ensure every house extension and landscaping project is not only functional but also beautiful and enduring. We take pride in blending modern techniques with timeless principles, ensuring every detail is perfect.
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
-    {{ end }}
-    {{ end }}
     <!--  End of video cta area  -->
+    {{ end }}
+    {{ end }}
+    <!--  why us area -->
+    {{ with .Params.why_us }}
+    <section class="section section-space--inner--120 grey-bg">
+        <div class="feature-icon-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="section-title-area text-center">
+                            <h2 class="section-title section-space--bottom--50">Why We’re Different</h2>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="feature-icon-wrapper">
+                            <div class="row">
+                                {{ range . }}
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="single-feature-icon">
+                                        <h3 class="single-feature-icon__title">{{ .title }}</h3>
+                                        <p class="single-feature-icon__content">{{ .details }}</p>
+                                    </div>
+                                </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{ end }}
+    <!--  End of why us area  -->
+    <section class="section section-space--inner--120">
+        <div class="container">
+            <div class="row section-space--bottom--50">
+                <div class="col-lg-12">
+                    <div class="section-title-area text-center">
+                        <h2 class="section-title section-space--bottom--30">Our Services</h2>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <div class="service-item-wrapper">
+                        <div class="row">
+                            {{ range .Site.Taxonomies.categories }}
+                            {{ $link := .Page.Permalink }}
+                            <div class="col-lg-4 col-md-6 col-12 section-space--bottom--30">
+                                <div class="service-grid-item">
+                                    {{ with .Page.Params.cover }}
+                                    <div class="service-grid-item__image">
+                                        <div class="service-grid-item__image-wrapper">
+                                            <a href="{{ $link }}">
+                                                <img width="370" height="237" src='{{ . | relURL }}' class="img-fluid" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+                                    {{ end }}
+                                    <div class="service-grid-item__content">
+                                        <h3 class="title">
+                                            <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                                        </h3>
+                                        <p class="subtitle">{{ .Page.Description }}</p>
+                                        <a href="{{ .Page.Permalink }}" class="see-more-link">SEE MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ end }}
+                            <div class="d-flex justify-content-center align-items-center section-space--top--30">
+                                <a href="/services/" class="ht-btn ht-btn--round">View All</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row section-space--bottom--50">
+                <div class="col-lg-12">
+                    <div class="section-title-area">
+                        <h4 class="section-space--bottom--30" style="color: #E11A22;">A Commitment to Community</h4>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <p class="subtitle">
+                        We’re more than just builders and landscapers—we’re neighbors. Serving [Local Area or Region], we’re proud to help shape the homes and neighborhoods of our community. Every project we undertake reflects our dedication to improving lives and creating spaces where memories are made.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title-area">
+                        <h4 class="section-space--bottom--30" style="color: #E11A22;">Let’s Build Your Future Together</h4>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <p class="subtitle">
+                        At First Choice Builders, we’re passionate about helping homeowners like you realize their property’s full potential. Explore our services and discover how we can make your house extension and landscaping dreams a reality.
+                        <br><br>
+                        <a href="/contact/" style="color: #E11A22;">Contact us</a> today to start your journey.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <!--  testimonial slider area -->
     {{ with .Params.testimonial_section }}
     {{ if .enable }}
@@ -189,6 +280,8 @@
     {{ end }}
     <!--  End of testimonial slider area  -->
     <!--  project slider area -->
+    {{ with .Params.projects_section }}
+    {{ if .enable }}
     <div class="project-slider-area grey-bg section-space--inner--120">
         <div class="container">
             <div class="row">
@@ -241,6 +334,8 @@
             </div>
         </div>
     </div>
+    {{ end }}
+    {{ end }}
     <!--  End of project slider area  -->
     {{ with .Params.team_section }}
     {{ if .enable }}
@@ -284,5 +379,5 @@
     </div>
     {{ end }}
     {{ end }}
-    <!--  End of team job area  -->
+    <!--  End of team job area  --> -->
 {{ end }}

@@ -1,0 +1,104 @@
+{{ define "main" }}
+    <!--====================  breadcrumb area ====================-->
+    {{ partial "hero.html" . }}
+    <!--====================  End of breadcrumb area  ====================-->
+    <div class="page-wrapper section-space--inner--120">
+        <div class="blog-section">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-8 col-12">
+                        <div class="row">
+                            {{ range .Paginator.Pages }}
+                            <div class="col-sm-6 col-12">
+                                <div class="blog-post-slider__single-slide blog-post-slider__single-slide--grid-view">
+                                    <div class="blog-post-slider__image section-space--bottom--30">
+                                        {{ $placeholder := "images/placeholder.png" }}
+                                        <a href="{{ .Permalink }}"><img width="370" height="240" src="{{ default $placeholder .Params.cover | relURL }}" class="img-fluid" alt=""></a>
+                                    </div>
+                                    <div class="blog-post-slider__content">
+                                        <p class="post-date">{{ .Date | time.Format "January 2, 2006" }}</p>
+                                        <h3 class="post-title">
+                                            <a href="{{ .Permalink }}">{{ .Title }}</a>
+                                        </h3>
+                                        <p class="post-excerpt">{{ .Description | truncate 120 }}</p>
+                                        <a href="{{ .Permalink }}" class="see-more-link">SEE MORE</a>
+                                    </div>
+                                </div>
+                            </div>
+                            {{ end }}
+                        </div>
+                        {{ with .Paginator }}
+                        <div class="row">
+                            <div class="col">
+                                <ul class="page-pagination section-space--top--30">
+                                    {{ with .Prev }}
+                                    <li><a href="#"><i class="fa fa-angle-left"></i> Prev</a></li>
+                                    {{ end }}
+                                    
+                                    {{- $slots := 5 }}
+                                    {{- $start := math.Max 1 (sub .PageNumber (math.Floor (div $slots 2))) }}
+                                    {{- $end := math.Min .TotalPages (sub (add $start $slots) 1) }}
+
+                                    {{- if lt (add (sub $end $start) 1) $slots }}
+                                        {{- $start = math.Max 1 (add (sub $end $slots) 1) }}
+                                    {{- end }}
+
+                                    {{- if lt $start 1 }}{{ $start = 1 }}{{ end }}
+                                    {{- if lt $end 1 }}{{ $end = 1 }}{{ end }}
+
+                                    {{- range $k := seq $start $end }}
+                                    {{- if eq $.Paginator.PageNumber $k }}
+                                    <li class="active">
+                                        <a aria-current="page" aria-label="Page {{ $k }}" class="page-link" role="button">{{ $k }}</a>
+                                    </li>
+                                    {{- else }}
+                                    <li>
+                                        <a href="{{ (index $.Paginator.Pagers (sub $k 1)).URL }}" aria-label="Page {{ $k }}" class="page-link" role="button">{{ $k }}</a>
+                                    </li>
+                                    {{- end }}
+                                    {{- end }}
+                                    {{- with .Next }}
+                                    <li><a href="#"><i class="fa fa-angle-right"></i> Next</a></li>
+                                    {{- end }}
+                                </ul>
+                            </div>
+                        </div>
+                        {{ end }}
+                    </div>
+
+                    <div class="col-lg-4 col-12">
+                        {{ with .Site.Taxonomies.tags }}
+                        <div class="sidebar">
+                            <h3 class="sidebar-title">Tags</h3>
+
+                            <ul class="sidebar-tag">
+                                {{ range . }}
+                                <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+                                {{ end }}
+                            </ul>
+
+                        </div>
+                        {{ end }}
+                        {{ with .Pages.ByDate.Reverse }}
+                        {{ $placeholder := "images/placeholder.png" }}
+                        <div class="sidebar">
+                            <h3 class="sidebar-title">Latest Posts</h3>
+                            {{ range first 3 . }}
+                            <div class="sidebar-blog">
+                                <a href="{{ .Permalink }}" class="image"><img src="{{ default $placeholder .Params.cover | relURL }}" alt=""></a>
+                                <div class="content">
+                                    <h5><a href="{{ .Permalink }}" style="text-decoration: none; color: inherit;">{{ .Title }}</a></h5>
+                                    <span>{{ .Date | time.Format "02 January 2006" }}</span>
+                                </div>
+                            </div>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{{ end }}

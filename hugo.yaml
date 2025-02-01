@@ -2,6 +2,13 @@ baseURL: 'https://example.org/'
 languageCode: 'en-us'
 title: 'First Choice Builders'
 
+taxonomies:
+  category: categories
+  tag: tags
+
+pagination:
+  pagerSize: 6
+
 menus:
   main:
     - name: 'Home'
@@ -10,6 +17,14 @@ menus:
     - name: 'Services'
       url: '/services/'
       weight: 20
+    - name: 'Extensions'
+      url: '/categories/extensions'
+      weight: 10
+      parent: 'Services'
+    - name: 'Landscaping'
+      url: '/categories/landscaping'
+      weight: 20
+      parent: Services
     - name: 'Projects'
       url: '/projects/'
       weight: 30

@@ -3,16 +3,25 @@ title: Home
 
 hero_section:
     enable: true
-    slides:
-        - heading: 'WELCOME TO FIRST CHOICE BUILDERS'
-          image: 'images/house-street-view.jpg'
-        - heading: 'Building your dreams into reality. Every project, a new success story.'
-          image: 'images/house-view.jpg'
-        - heading: 'Excellence in every detail. Building upon tradition, driven by innovation.'
-          image: 'images/house-inner-view.jpg'
+    details:
+        heading: 'WELCOME TO FIRST CHOICE BUILDERS'
+        subheading: 'Your Trusted Partner for House Extensions and Landscaping'
+        text: 'At First Choice Builders, we specialize in transforming houses into dream homes and outdoor spaces into breathtaking landscapes. Whether you’re looking to expand your living space with a beautifully designed house extension or elevate your property with stunning landscaping, we’re here to bring your vision to life.'
+        image: 'images/house-street-view.jpg'
+    features:
+      - icon: 'images/worker-icon.png'
+        title: 'Expert Craftsmanship'
+        details: 'With years of experience, our team delivers high-quality house extensions that seamlessly integrate with your home’s architecture.'
+      - icon: 'images/bulb-icon.png'
+        title: 'Innovative Landscaping'
+        details: 'From lush gardens to functional outdoor spaces, our landscaping services are designed to enhance beauty and usability.'
+      - icon: 'images/support-icon.png'
+        title: 'Customer-Centric Approach'
+        details: 'We listen, collaborate, and tailor every project to match your unique needs and preferences.'
+
 
 stats_section:
-    enable: true
+    enable: false
     stats:
         - name: 'Project'
           count: 118
@@ -29,15 +38,22 @@ stats_section:
 
 about_section:
     enable: true
-    pretitle: "Welcome to First Choice Builders"
-    heading: "10 Years of Experience in Industry"
-    details: "So glad you’re here. Starting as a small business in Reading, United Kingdom back in 2017 we have big dreams. Our passion for construction means that we provide our customers nothing but the highest quality of products that are guaranteed to meet their needs and keep them satisfied! We offer prepossessing projects at introductory prices with a high standard of finish. Our way of delivering is what makes us to stand out from our competitors and makes us a number one in the industry. With a motivated team, we strive to be the creative minds that bring a smile to your face. That’s why we’re always looking for innovative new ways to get the best to you. We are committed to looking after your project and to make sure that you will be happy with the work at the end of the process.<br><br>First Choice Builders are committed to meeting the highest quality standards without compromising our safety culture."
-    button:
-      label: Contact Us
-      link: /
+    pretitle: "About Us "
+    heading: "Our Story: Transforming Homes, Shaping Landscapes"
+    details: "At First Choice Builders, we believe that every home has the potential to grow and evolve, just like the families that live within it. Founded on a passion for craftsmanship and a commitment to excellence, our journey began in 2017 with a simple mission: to help homeowners create spaces that reflect their dreams, needs, and lifestyles."
+  
+why_us:
+    - title: 'Personalized Service'
+      details: 'Your vision is at the heart of everything we do. We work closely with you to understand your unique needs and preferences.'
+    - title: 'Seamless Integration'
+      details: 'Our house extensions are designed to seamlessly blend with the existing architecture, ensuring your home looks cohesive and elegant.'
+    - title: 'Sustainable Landscaping'
+      details: 'We prioritize eco-friendly practices to create outdoor spaces that are as kind to the environment as they are stunning.'
+    - title: 'End-to-End Expertise'
+      details: 'From concept to completion, we handle every aspect of your project with precision and care.'
 
 testimonial_section:
-    enable: true
+    enable: false
     testimonials:
       - name: "Julian Saich"
         message: "Jon and his team reacted quickly to our requirement for building some concrete block walls, working in challenging conditions on our site. He is honest, hardworking and committed to safely delivering to specification, on time and in budget. I highly recommend Jon and his team. Thank you Jon. Julian Clear Span Buildings Limited."
@@ -57,4 +73,7 @@ testimonial_section:
         message: "First choice builders build our house extension from foundation to roof. Jon is an experienced builder and the quality of work was good."
       - name: "Jan Dugdale"
         message: "First Choice builders did an excellent with the patio area and then did a second job of a grid gravel driveway and another of a new paved pathway - all excellent - very happy."
+
+projects_section:
+    enable: false
 ---
