@@ -319,25 +319,25 @@
       =            contact map active            =
       =============================================*/
   
-    if ($(".contact-map").length) {
-      function initialize() {
-        var mapOptions = {
-          zoom: 14,
-          scrollwheel: false,
-          center: new google.maps.LatLng(40.73061, -73.935242)
-        };
-        var map = new google.maps.Map(
-          document.getElementById("contact-map"),
-          mapOptions
-        );
-        var marker = new google.maps.Marker({
-          position: map.getCenter(),
-          map: map,
-          animation: google.maps.Animation.BOUNCE
-        });
-      }
-      google.maps.event.addDomListener(window, "load", initialize);
-    }
+    // if ($(".contact-map").length) {
+    //   function initialize() {
+    //     var mapOptions = {
+    //       zoom: 14,
+    //       scrollwheel: false,
+    //       center: new google.maps.LatLng(40.73061, -73.935242)
+    //     };
+    //     var map = new google.maps.Map(
+    //       document.getElementById("contact-map"),
+    //       mapOptions
+    //     );
+    //     var marker = new google.maps.Marker({
+    //       position: map.getCenter(),
+    //       map: map,
+    //       animation: google.maps.Animation.BOUNCE
+    //     });
+    //   }
+    //   google.maps.event.addDomListener(window, "load", initialize);
+    // }
   
     /*=====  End of contact map active  ======*/
   })(jQuery);  

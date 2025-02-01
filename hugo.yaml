@@ -28,9 +28,12 @@ menus:
     - name: 'Projects'
       url: '/projects/'
       weight: 30
+    - name: 'Blog'
+      url: '/blog/'
+      weight: 40
     - name: 'Contact Us'
       url: '/contact/'
-      weight: 40
+      weight: 50
 
   services:
     - name: 'Landscaping'
