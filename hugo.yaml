@@ -1,6 +1,7 @@
 baseURL: 'https://example.org/'
 languageCode: 'en-us'
 title: 'First Choice Builders'
+enableRobotsTXT: true
 
 taxonomies:
   category: categories

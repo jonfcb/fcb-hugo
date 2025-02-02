@@ -1,5 +1,7 @@
 ---
 title: Home
+sitemap:
+  priority: 1 
 
 hero_section:
     enable: true
