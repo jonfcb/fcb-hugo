@@ -1,6 +1,7 @@
 ---
 title: Loft Conversion, Reading
 cover: 'images/projects/lcr/lcr-4.jpg'
+weight: 29
 labels: ['house extensions']
 ---
 

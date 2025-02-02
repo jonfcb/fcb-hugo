@@ -1,6 +1,7 @@
 ---
 title: Sandstone Patio
 cover: 'images/projects/sp/sp-4.jpg'
+weight: 13
 labels: ['landscaping']
 ---
 

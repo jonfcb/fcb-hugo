@@ -1,6 +1,7 @@
 ---
 title: Porcelain Patio Installation And a Retaining Brick Wall Construction
 cover: 'images/projects/ppinrbwc/ppinrbwc-5.jpg'
+weight: 11
 labels: ['landscaping']
 ---
 

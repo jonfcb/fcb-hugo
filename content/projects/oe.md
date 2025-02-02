@@ -2,6 +2,7 @@
 title: Office Extension
 description: This building project showcases the transformation of a rear space into a stylish and functional area. The journey started with groundwork and excavation, followed by meticulous brickwork and roofing construction. The result is a seamless addition to the home, blending perfectly with its surroundings.
 cover: 'images/projects/oe/oe-6.jpg'
+weight: 26
 labels: ['house extensions']
 ---
 

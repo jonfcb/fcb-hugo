@@ -1,6 +1,7 @@
 ---
 title: Patio And Decking
 cover: 'images/projects/pnd/pnd-4.jpg'
+weight: 23
 labels: ['landscaping']
 ---
 

@@ -2,6 +2,7 @@
 title: Full Kitchen Renovation
 description: This project involved the complete transformation of an outdated kitchen into a sleek and modern culinary space.
 cover: 'images/projects/fkr/fkr-3.jpg'
+weight: 8
 labels: ['house extensions']
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Garden Wall and Retaining Wall
 cover: 'images/projects/gwnrw/gwnrw-10.jpg'
+weight: 22
 labels: ['landscaping']
 ---
 

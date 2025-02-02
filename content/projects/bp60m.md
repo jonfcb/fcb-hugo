@@ -1,6 +1,7 @@
 ---
 title: Block Paving 60m2
 cover: 'images/projects/bp60m/bp60m-3.jpg'
+weight: 19
 labels: ['landscaping']
 ---
 

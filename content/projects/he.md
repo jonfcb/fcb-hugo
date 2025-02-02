@@ -2,6 +2,7 @@
 title: Home Extension
 description: This ambitious project involved a complete build and interior overhaul, resulting in a modern, spacious, and functional living space. The development journey is showcased through every stage of construction, from foundation to final finishing.
 cover: 'images/projects/he/he-8.jpg'
+weight: 32
 labels: ['house extensions']
 ---
 

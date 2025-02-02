@@ -1,6 +1,7 @@
 ---
 title: Astroturfing RG5
 cover: 'images/projects/arg5/arg5-3.jpg'
+weight: 4
 labels: ['landscaping']
 ---
 

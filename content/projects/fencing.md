@@ -1,6 +1,7 @@
 ---
 title: Fencing
 cover: 'images/projects/fencing/fencing-1.jpg'
+weight: 18
 labels: ['landscaping']
 ---
 

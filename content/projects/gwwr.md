@@ -1,6 +1,7 @@
 ---
 title: Garden Wall With Railings
 cover: 'images/projects/gwwr/gwwr-5.jpg'
+weight: 21
 labels: ['landscaping']
 ---
 

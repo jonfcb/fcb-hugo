@@ -1,6 +1,7 @@
 ---
 title: Gravel Driveway
 cover: 'images/projects/gd/gd-3.jpg'
+weight: 34
 labels: ['landscaping']
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: Refurbishment, Reading
 cover: 'images/projects/rr/rr-2.jpg'
+weight: 12
 labels: ['house extensions']
 ---
 

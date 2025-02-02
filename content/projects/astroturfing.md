@@ -1,6 +1,7 @@
 ---
 title: Astroturfing
 cover: 'images/projects/astroturfing/astroturfing-3.jpg'
+weight: 6
 labels: ['landscaping']
 ---
 
