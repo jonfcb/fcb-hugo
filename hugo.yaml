@@ -38,17 +38,11 @@ menus:
 
   services:
     - name: 'Landscaping'
-      url: '/'
+      url: '/categories/landscaping/'
       weight: 10
-    - name: 'Porcelan Ratio'
-      url: '/'
-      weight: 20
-    - name: 'Garden Wall'
-      url: '/'
-      weight: 30
     - name: 'House Extensions'
-      url: '/'
-      weight: 40
+      url: '/categories/extensions/'
+      weight: 20
 
   links:
     - name: 'Services'

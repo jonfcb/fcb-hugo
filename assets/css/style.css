@@ -5615,6 +5615,7 @@ input::placeholder {
 }
 .offcanvas-navigation ul.sub-menu {
   margin-left: 25px;
+  padding: 0;
 }
 .offcanvas-navigation ul.sub-menu > li > a {
   font-size: 13px;
@@ -5638,6 +5639,7 @@ input::placeholder {
 }
 .offcanvas-navigation ul li.menu-item-has-children a {
   display: block;
+  text-decoration: none;
 }
 .offcanvas-navigation ul li.menu-item-has-children.active > .menu-expand i:before {
   -webkit-transform: rotate(0);
