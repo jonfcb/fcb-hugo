@@ -2,6 +2,7 @@
 title: Front Porch Construction & Renovation
 description: This project involved the complete design and construction of a modern front porch. The transformation showcases a blend of functionality and aesthetics while maintaining harmony with the existing brickwork of the property.
 cover: 'images/projects/fpc/fpc-5.jpg'
+labels: ['house extensions']
 ---
 
 This project involved the complete design and construction of a modern front porch. The transformation showcases a blend of functionality and aesthetics while maintaining harmony with the existing brickwork of the property.

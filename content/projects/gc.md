@@ -2,6 +2,7 @@
 title: Garage Conversion and Modern Living Upgrade
 description: This project transformed an underutilized garage into a functional and aesthetically pleasing living space. The process highlights thoughtful planning, quality craftsmanship, and attention to detail.
 cover: 'images/projects/gc/gc-3.jpg'
+labels: ['house extensions']
 ---
 
 This project transformed an underutilized garage into a functional and aesthetically pleasing living space. The process highlights thoughtful planning, quality craftsmanship, and attention to detail.

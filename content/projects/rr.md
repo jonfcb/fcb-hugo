@@ -1,6 +1,7 @@
 ---
 title: Refurbishment, Reading
 cover: 'images/projects/rr/rr-2.jpg'
+labels: ['house extensions']
 ---
 
 {{< gallery >}}

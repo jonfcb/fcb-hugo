@@ -5,6 +5,7 @@ title: 'First Choice Builders'
 taxonomies:
   category: categories
   tag: tags
+  label: labels
 
 pagination:
   pagerSize: 6

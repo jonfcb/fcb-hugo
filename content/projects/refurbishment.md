@@ -1,6 +1,7 @@
 ---
 title: Refurbishment
 cover: 'images/projects/refurbishment/refurbishment-5.jpg'
+labels: ['house extensions']
 ---
 
 {{< gallery >}}

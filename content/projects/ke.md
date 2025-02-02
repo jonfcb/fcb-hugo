@@ -1,6 +1,7 @@
 ---
 title: Kitchen Extension
 cover: images/projects/ke/ke-1.jpg
+labels: ['house extensions']
 ---
 
 {{< gallery >}}

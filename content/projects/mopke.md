@@ -2,6 +2,7 @@
 title: "Modern Open-Plan Kitchen Extension: From Concept to Reality"
 description: This project highlights the journey from construction to a contemporary and functional living space. Starting with structural work, including steel beam installations and brickwork modifications, the transformation is remarkable. The final design boasts a bright, open-plan kitchen with skylights and expansive bi-fold doors, seamlessly connecting the indoor space to the outdoors.
 cover: 'images/projects/mopke/mopke-2.jpg'
+labels: ['house extensions']
 ---
 
 This project highlights the journey from construction to a contemporary and functional living space. Starting with structural work, including steel beam installations and brickwork modifications, the transformation is remarkable. The final design boasts a bright, open-plan kitchen with skylights and expansive bi-fold doors, seamlessly connecting the indoor space to the outdoors.
