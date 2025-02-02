@@ -8,7 +8,6 @@ hero_section:
     details:
         heading: 'WELCOME TO FIRST CHOICE BUILDERS'
         subheading: 'Your Trusted Partner for House Extensions and Landscaping'
-        text: 'At First Choice Builders, we specialize in transforming houses into dream homes and outdoor spaces into breathtaking landscapes. Whether you’re looking to expand your living space with a beautifully designed house extension or elevate your property with stunning landscaping, we’re here to bring your vision to life.'
         image: 'images/house-street-view.jpg'
     features:
       - icon: 'images/worker-icon.png'

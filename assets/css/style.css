@@ -5720,9 +5720,6 @@ input::placeholder {
 .footer-logo {
   margin-bottom: 35px;
 }
-.footer-logo img {
-  filter: invert(100%) grayscale(1) !important;
-}
 .footer-logo--style2 {
   margin-bottom: 170px;
 }

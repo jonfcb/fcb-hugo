@@ -2,6 +2,7 @@
 title: Comprehensive Guide to Landscaping Services
 description: Landscaping can transform an outdoor space into a functional, beautiful, and inviting area, enhancing both its aesthetic appeal and value. From constructing sturdy retaining walls to laying elegant patios and driveways, professional landscaping services cover a wide range of projects. This guide provides a detailed overview of essential landscaping services, including garden walls, patios, paving, turf, fencing, decking, and more.
 date: 2025-02-01
+cover: 'images/services/astroturf.jpg'
 tags: ['tags']
 ---
 

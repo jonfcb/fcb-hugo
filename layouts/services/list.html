@@ -11,6 +11,21 @@
                     <div class="col-lg-12">
                         <div class="service-item-wrapper">
                             <div class="row">
+                                <div class="col">
+                                    <ul class="page-pagination section-space--bottom--50">
+                                        <li class="label active">
+                                            <a href='{{ site.BaseURL }}services/' role="button">All</a>
+                                        </li>
+                                        {{ range .Site.Taxonomies.categories }}
+                                        {{ $active := eq $.RelPermalink .Page.RelPermalink }}
+                                        <li class="{{ if $active }}active{{ end }} label">
+                                            <a href='{{ .Page.RelPermalink }}' role="button">{{ .Page.LinkTitle }}</a>
+                                        </li>
+                                        {{ end }}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="row">
                                 {{ range .Pages.ByDate }}
                                 {{ $link := .Permalink }}
                                 <div class="col-lg-4 col-md-6 col-12 section-space--bottom--30">

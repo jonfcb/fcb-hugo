@@ -20,16 +20,28 @@ menus:
       url: '/services/'
       weight: 20
     - name: 'Extensions'
-      url: '/categories/extensions'
+      url: '/categories/extensions/'
       weight: 10
-      parent: 'Services'
+      identifier: services-extension
+      parent: Services
     - name: 'Landscaping'
-      url: '/categories/landscaping'
+      url: '/categories/landscaping/'
       weight: 20
+      identifier: services-landscaping
       parent: Services
     - name: 'Projects'
       url: '/projects/'
       weight: 30
+    - name: 'Extensions'
+      url: '/labels/house-extensions/'
+      weight: 10
+      identifier: projects-extension
+      parent: Projects
+    - name: 'Landscaping'
+      url: '/labels/landscaping/'
+      weight: 20
+      identifier: projects-landscaping
+      parent: Projects
     - name: 'Blog'
       url: '/blog/'
       weight: 40
