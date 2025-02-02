@@ -6,7 +6,9 @@
 {{ partial "styles.html" . }}
 
 <!-- Favicon -->
-<link rel="icon" href='{{ "images/favicon.png" | relURL }}'>
+{{ with resources.Get "favicon.png" }}
+<link rel="icon" href='{{ .RelPermalink }}'>
+{{ end }}
 
 <!-- Open Graph -->
 {{ template "_internal/opengraph.html" . }}
