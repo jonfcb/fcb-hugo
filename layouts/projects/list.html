@@ -13,7 +13,7 @@
                                 <div class="col">
                                     <ul class="page-pagination section-space--bottom--50">
                                         <li class="label active">
-                                            <a href='{{ "/projects/" | relURL }}' role="button">All</a>
+                                            <a href='{{ site.BaseURL }}projects/' role="button">All</a>
                                         </li>
                                         {{ range .Site.Taxonomies.labels }}
                                         {{ $active := eq $.RelPermalink .Page.RelPermalink }}
