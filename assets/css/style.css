@@ -5947,6 +5947,8 @@ input::placeholder {
 }
 .sidebar-blog .image img {
   width: 100%;
+  height: 80px;
+  object-fit: cover;
 }
 .sidebar-blog .content {
   -webkit-box-flex: 1;
@@ -7664,6 +7666,8 @@ a.scroll-top.show {
 }
 .blog-post-slider__image a img {
   width: 100%;
+  height: 300px;
+  object-fit: cover;
 }
 .blog-post-slider__image a:before {
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);

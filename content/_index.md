@@ -5,10 +5,14 @@ sitemap:
 
 hero_section:
     enable: true
-    details:
-        heading: 'WELCOME TO FIRST CHOICE BUILDERS'
-        subheading: 'Your Trusted Partner for House Extensions and Landscaping'
-        image: 'images/house-street-view.jpg'
+    slides:
+        - heading: 'WELCOME TO FIRST CHOICE BUILDERS'
+          image: 'images/house-street-view.jpg'
+        - heading: 'Your Trusted Partner for House Extensions and Landscaping'
+          image: 'images/house-inner-view.jpg'
+        - heading: Transforming visions into reality with excellence.
+          subheading: Every project, a testament to success Excellence in every detail. Honoring tradition, empowered by innovation.
+          image: 'images/house-view.jpg'
     features:
       - icon: 'images/worker-icon.png'
         title: 'Expert Craftsmanship'

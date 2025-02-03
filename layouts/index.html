@@ -3,25 +3,23 @@
     <!--  hero slider area -->
     {{ with .Params.hero_section }}
     {{ if .enable }}
+    {{ with .slides }}
     <div class="hero-alider-area">
         <div class="hero-slider__container-area">
-            <div class="hero-slider__container">
-                {{ with .details }}
-                <div class="hero-slider__wrapper">
-                    <!--=======  single slider item  =======-->
-                    <div class="hero-slider__single-item bg-img" data-bg="{{ .image | relURL }}">
+            <div class="swiper-container hero-slider__container">
+                <div class="swiper-wrapper hero-slider__wrapper">
+                    <!-- single slider item -->
+                    {{ range . }}
+                    <div class="swiper-slide hero-slider__single-item bg-img" data-bg="{{ .image | relURL }}">
                         <div class="hero-slider__content-wrapper">
                             <div class="container">
                                 <div class="row">
                                     <div class="col-lg-12">
                                         <div class="hero-slider__content">
                                             {{ with .heading }}
-                                            <h1 class="hero-slider__title">{{ . }}</h1>
+                                            <h2 class="hero-slider__title">{{ .}}</h2>
                                             {{ end }}
                                             {{ with .subheading }}
-                                            <h2 style="color: #E11A22;">{{ . }}</h2>
-                                            {{ end }}
-                                            {{ with .text }}
                                             <p class="hero-slider__text">{{ . }}</p>
                                             {{ end }}
                                         </div>
@@ -30,12 +28,19 @@
                             </div>
                         </div>
                     </div>
-                    <!--=======  End of single slider item  =======-->
+                    {{ end }}
+                    <!-- End of single slider item -->
                 </div>
-                {{ end }}
+            </div>
+            <div class="ht-swiper-button-prev ht-swiper-button-prev-13 ht-swiper-button-nav d-none d-xl-flex justify-content-center align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="10"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+            </div>
+            <div class="ht-swiper-button-next ht-swiper-button-next-13 ht-swiper-button-nav d-none d-xl-flex justify-content-center align-items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="10"><path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
             </div>
         </div>
     </div>
+    {{ end }}
     <!--  End of hero slider area  -->
     <!--Feature section start-->
     {{ with .features }}
@@ -101,7 +106,7 @@
     <!--  video cta area -->
     {{ with .Params.about_section }}
     {{ if .enable }}
-    <div class="video-cta-area section-space--inner--120">
+    <div class="video-cta-area section-space--inner--120" id="about_section" style="scroll-margin-top: 200px;">
         <div class="container">
             <div class="row align-items-center section-space--bottom--50">
                 <div class="col-lg-6 col-md-12">

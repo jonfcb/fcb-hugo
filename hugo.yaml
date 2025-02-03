@@ -16,9 +16,12 @@ menus:
     - name: 'Home'
       url: '/'
       weight: 10
+    - name: 'About Us'
+      url: '/#about_section'
+      weight: 20
     - name: 'Services'
       url: '/services/'
-      weight: 20
+      weight: 30
     - name: 'Extensions'
       url: '/categories/extensions/'
       weight: 10
@@ -31,7 +34,7 @@ menus:
       parent: Services
     - name: 'Projects'
       url: '/projects/'
-      weight: 30
+      weight: 40
     - name: 'Extensions'
       url: '/labels/house-extensions/'
       weight: 10
@@ -44,10 +47,10 @@ menus:
       parent: Projects
     - name: 'Blog'
       url: '/blog/'
-      weight: 40
+      weight: 50
     - name: 'Contact Us'
       url: '/contact/'
-      weight: 50
+      weight: 60
 
   services:
     - name: 'Landscaping'
