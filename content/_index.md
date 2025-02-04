@@ -59,25 +59,6 @@ why_us:
 
 testimonial_section:
     enable: true
-    testimonials:
-      - name: "Julian Saich"
-        message: "Jon and his team reacted quickly to our requirement for building some concrete block walls, working in challenging conditions on our site. He is honest, hardworking and committed to safely delivering to specification, on time and in budget. I highly recommend Jon and his team. Thank you Jon. Julian Clear Span Buildings Limited."
-      - name: "Adam Morris"
-        message: "Jon did a great job repointing part of the sidewall of the house, whilst giving useful and genuine advice to avoid unnecessary additional costs. Would highly recommend for his friendly approach"
-      - name: "Lina Riches"
-        message: "First choice builders has completed our patio leaving us over the moon. They did exactly what was required and more! Jon was professional, courteous, hard working with huge attention to detail but with the personal touch."
-      - name: "Tom Smith"
-        message: "First choice did a very good job rebuilding an old wall like for like. Got the job done with minimum fuss. Very pleased with work."
-      - name: "Sandra Macedo"
-        message: "The job was building an additional patio with 2 paths leading up to it. Price quoted was reasonable and job was completed within the time frame quoted. The finish was very professional and matched the existing slabs well. I would not hesitate to recommend this company and use again if needed"
-      - name: "Ross Tristem"
-        message: "They are excellent. Their work was quick, efficient and timely I recommend Jon and his team without hesitation. Ten out of ten. Dr R Tristem"
-      - name: "Elliot Gaitch"
-        message: "First choice builders did a fantastic job installing a gravel driveway with brick wall around the edge. Very happy and would definitely recommend."
-      - name: "Danielle Anderson"
-        message: "First choice builders build our house extension from foundation to roof. Jon is an experienced builder and the quality of work was good."
-      - name: "Jan Dugdale"
-        message: "First Choice builders did an excellent with the patio area and then did a second job of a grid gravel driveway and another of a new paved pathway - all excellent - very happy."
 
 projects_section:
     enable: false

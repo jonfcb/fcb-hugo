@@ -13,7 +13,7 @@
                             <div class="col-sm-6 col-12">
                                 <div class="blog-post-slider__single-slide blog-post-slider__single-slide--grid-view">
                                     <div class="blog-post-slider__image section-space--bottom--30">
-                                        {{ $placeholder := "images/placeholder.png" }}
+                                        {{ $placeholder := site.Params.placeholder }}
                                         <a href="{{ .Permalink }}"><img width="370" height="240" src="{{ default $placeholder .Params.cover | relURL }}" class="img-fluid" alt=""></a>
                                     </div>
                                     <div class="blog-post-slider__content">

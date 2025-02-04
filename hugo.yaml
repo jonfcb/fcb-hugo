@@ -71,14 +71,16 @@ menus:
       url: '/projects/'
       weight: 30
     - name: 'Reviews'
-      url: '/#testimonials'
+      url: '/labels/reviews/'
       weight: 40
 
 params:
   info:
     logo: 'images/logo.png'
+    footer_logo: 'images/logo.png'
     number: '+447472801506'
     text: 'First Choice Builders are committed to meeting the highest quality standards without compromising our safety culture.'
-    address: '59 Anderson Avenue Anderson Avenue, Earley, Reading, England, RG6 1HD'
+    address: '59 Anderson Avenue, Earley, Reading, England, RG6 1HD'
     email: 'info@firstchoice-builders.co.uk' 
   form_endpoint: https://formsubmit.co/info@firstchoice-builders.co.uk
+  placeholder: images/placeholder.png

@@ -61,7 +61,7 @@
                     </div>
                     {{ end }}
                     {{ with where site.RegularPages.ByDate.Reverse "Section" "blog" }}
-                    {{ $placeholder := "images/placeholder.png" }}
+                    {{ $placeholder := site.Params.placeholder }}
                     <div class="sidebar">
                         <h3 class="sidebar-title">Latest Posts</h3>
                         {{ range first 3 . }}

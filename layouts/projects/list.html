@@ -30,20 +30,30 @@
                                 {{ $title := .Title }}
                                 <div class="col-lg-4 col-sm-6 col-12 section-space--bottom--30">
                                     <div class="service-grid-item service-grid-item--style2">
-                                        {{ with .Params.cover }}
+                                        {{ $placeholder := site.Params.placeholder }}
                                         <div class="service-grid-item__image">
                                             <div class="service-grid-item__image-wrapper">
                                                 <a href="{{ $link }}">
-                                                    <img width="370" height="150" src="{{ . | relURL }}" class="img-fluid" alt="{{ $title }} {{ site.Title }}">
+                                                    <img width="370" height="150" src="{{ default $placeholder .Params.cover | relURL }}" class="img-fluid" alt="{{ $title }} {{ site.Title }}">
                                                 </a>
                                             </div>
                                         </div>
-                                        {{ end }}
                                         <div class="service-grid-item__content">
                                             <h3 class="title">
                                                 <a href="{{ .Permalink }}">{{ .Title }}</a>
                                             </h3>
-                                            <p class="subtitle">{{ default .Description .Params.subtitle | truncate 70 }}</p>
+                                            {{ $content := .Content }}
+                                            {{ $description := .Description }}
+                                            {{ $subtitle := .Params.subtitle }}
+                                            {{ with .Params.labels }}
+                                            {{ range first 1 . }}
+                                            {{ if strings.Contains . "reviews" }}
+                                            <p class="subtitle">{{ $content | truncate 70 }}</p>
+                                            {{ else }}
+                                            <p class="subtitle">{{ default $description $subtitle | truncate 70 }}</p>
+                                            {{ end }}
+                                            {{ end }}
+                                            {{ end }}
                                             <a href="{{ .Permalink }}" class="see-more-link">SEE MORE</a>
                                         </div>
                                     </div>

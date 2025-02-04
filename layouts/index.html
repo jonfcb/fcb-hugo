@@ -235,7 +235,7 @@
                     <p class="subtitle">
                         At First Choice Builders, we’re passionate about helping homeowners like you realize their property’s full potential. Explore our services and discover how we can make your house extension and landscaping dreams a reality.
                         <br><br>
-                        <a href="/contact/" style="color: #E11A22;">Contact us</a> today to start your journey.
+                        <a href="{{ site.BaseURL }}contact/" style="color: #E11A22;">Contact us</a> today to start your journey.
                     </p>
                 </div>
             </div>
@@ -243,8 +243,8 @@
     </section>
     
     <!--  testimonial slider area -->
-    {{ with .Params.testimonial_section }}
-    {{ if .enable }}
+    <!--
+    {{ with .Site.Taxonomies.labels.reviews }}
     <div class="testimonial-slider-area testimonial-slider-area-bg section-space--inner--120 bg-img" style="scroll-margin-top: 300px;" data-bg='{{ "images/dev/testimonial-bg.webp" | relURL }}' id="testimonials">
         <div class="container">
             <div class="row">
@@ -253,23 +253,25 @@
                         <div class="testimonial-slider__container-area">
                             <div class="swiper-container testimonial-slider__container">
                                 <div class="swiper-wrapper testimonial-slider__wrapper">
-                                    {{ range .testimonials }}
+                                    {{ range . }}
                                     <div class="swiper-slide testimonial-slider__single-slide">
                                         <div class="author">
-                                            {{ with .image }}
+                                            {{ with .Page.Params.cover }}
                                             <div class="author__image">
                                                 <img width="100" height="100" src="{{ . | relURL }}" alt="">
                                             </div>
                                             {{ end }}
-                                            {{ with .name }}
+                                            {{ with .Page.Title }}
                                             <div class="author__details">
                                                 <h4 class="name">{{ . }}</h4>
                                             </div>
                                             {{ end }}
                                         </div>
+                                        {{ with .Page.Content }}
                                         <div class="content"> 
-                                            <i>“{{ .message }}”</i>
+                                            <i>“{{ . }}”</i>
                                         </div>
+                                        {{ end }}
                                     </div>
                                     {{ end }}
                                 </div>
@@ -281,8 +283,7 @@
             </div>
         </div>
     </div>
-    {{ end }}
-    {{ end }}
+    {{ end }} -->
     <!--  End of testimonial slider area  -->
     <!--  project slider area -->
     {{ with .Params.projects_section }}

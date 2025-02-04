@@ -30,15 +30,14 @@
                                 {{ $link := .Permalink }}
                                 <div class="col-lg-4 col-md-6 col-12 section-space--bottom--30">
                                     <div class="service-grid-item">
-                                        {{ with .Params.cover }}
+                                        {{ $placeholder := site.Params.placeholder }}
                                         <div class="service-grid-item__image">
                                             <div class="service-grid-item__image-wrapper">
                                                 <a href="{{ $link }}">
-                                                    <img width="370" height="237" src='{{ . | relURL }}' class="img-fluid" alt="">
+                                                    <img src='{{ default $placeholder .Params.cover | relURL }}' class="img-fluid" alt="">
                                                 </a>
                                             </div>
                                         </div>
-                                        {{ end }}
                                         <div class="service-grid-item__content">
                                             <h3 class="title">
                                                 <a href="{{ .Permalink }}">{{ .Title }}</a>
