@@ -45,6 +45,11 @@ menus:
       weight: 20
       identifier: projects-landscaping
       parent: Projects
+    - name: 'Reviews'
+      url: '/labels/reviews/'
+      weight: 30
+      identifier: projects-review
+      parent: Projects
     - name: 'Blog'
       url: '/blog/'
       weight: 50
