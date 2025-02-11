@@ -5062,6 +5062,9 @@ input::placeholder {
 .social-links--white-topbar {
   margin-right: 30px;
 }
+.social-links--white-topbar ul {
+  margin: 0;
+}
 .social-links--white-topbar ul li a {
   font-size: 16px;
   color: #ffffff;
@@ -5679,6 +5682,11 @@ input::placeholder {
 .off-canvas-widget-social a {
   margin: 0 10px;
   font-size: 14px;
+  color: inherit;
+  display: inline-block;
+  line-height: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 .off-canvas-widget-social a:first-child {
   margin-left: 0;
@@ -6012,9 +6020,10 @@ input::placeholder {
   background-color: #E11A22;
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  text-decoration: none;
 }
 .ht-btn--default:hover, .ht-btn--default:focus {
-  background-color: #da3810;
+  background-color: #d41016;
   color: #ffffff;
 }
 .ht-btn--default--dark-hover:hover, .ht-btn--default--dark-hover:focus {
