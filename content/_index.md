@@ -43,7 +43,7 @@ stats_section:
 
 about_section:
     enable: true
-    pretitle: "About Us "
+    pretitle: "About Us"
     heading: "Our Story: Transforming Homes, Shaping Landscapes"
     details: "At First Choice Builders, we believe that every home has the potential to grow and evolve, just like the families that live within it. Founded on a passion for craftsmanship and a commitment to excellence, our journey began in 2017 with a simple mission: to help homeowners create spaces that reflect their dreams, needs, and lifestyles."
   
