@@ -2,7 +2,7 @@
 title: Henley-on-Thames Town Council, Red Lion Lawn
 cover: 'images/projects/httcrll/httcrll-8.jpg'
 weight: 16
-labels: ['landscaping']
+projects: ['landscaping']
 ---
 
 {{< gallery >}}

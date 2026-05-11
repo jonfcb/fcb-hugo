@@ -2,7 +2,7 @@
 title: Repointing With Lime Mortar Reading Town Centre
 cover: 'images/projects/rwlm/rwlm-5.jpg'
 weight: 30
-labels: ['landscaping']
+projects: ['landscaping']
 ---
 
 {{< gallery >}}

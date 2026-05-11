@@ -2,14 +2,15 @@
 title: 'Fencing and Timber Work'
 description: Enhance privacy, security, and architectural charm with our fencing and timber installations. From traditional wooden panels to modern composite designs, we craft solutions to suit your property’s aesthetic and functional needs.
 cover: 'images/services/fencing.jpg'
-categories: ['landscaping']
+services: ['landscaping']
+weight: 4
 ---
 
 ### Overview
 Enhance privacy, security, and architectural charm with our fencing and timber installations. From traditional wooden panels to modern composite designs, we craft solutions to suit your property’s aesthetic and functional needs.
 
 ### Key Features
-- **Quality Timber & Treatments:** We use pressure-treated or specially coated timber that resists rot, decay, and insect damage.
+- **Quality Timber & Treatments:** We use pressure treated or specially coated timber that resists rot, decay, and insect damage.
 - **Stylish & Practical Options:** Decorative panels, horizontal slats, or trellises can be combined with gates, pergolas, and arbours.
 - **Precision & Stability:** Properly set fence posts and reinforced framework ensure durability in harsh weather conditions.
 

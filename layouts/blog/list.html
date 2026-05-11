@@ -14,7 +14,7 @@
                                 <div class="blog-post-slider__single-slide blog-post-slider__single-slide--grid-view">
                                     <div class="blog-post-slider__image section-space--bottom--30">
                                         {{ $placeholder := site.Params.placeholder }}
-                                        <a href="{{ .Permalink }}"><img width="370" height="240" src="{{ default $placeholder .Params.cover | relURL }}" class="img-fluid" alt=""></a>
+                                        <a href="{{ .Permalink }}" aria-label="{{ .Title }}"><img width="370" height="240" src="{{ default $placeholder .Params.cover | relURL }}" class="img-fluid" alt="{{ .Title }}"></a>
                                     </div>
                                     <div class="blog-post-slider__content">
                                         <p class="post-date">{{ .Date | time.Format "January 2, 2006" }}</p>
@@ -22,7 +22,7 @@
                                             <a href="{{ .Permalink }}">{{ .Title }}</a>
                                         </h3>
                                         <p class="post-excerpt">{{ .Description | truncate 120 }}</p>
-                                        <a href="{{ .Permalink }}" class="see-more-link">SEE MORE</a>
+                                        <a href="{{ .Permalink }}" class="see-more-link" aria-label="Read more: {{ .Title }}">SEE MORE</a>
                                     </div>
                                 </div>
                             </div>
@@ -34,8 +34,8 @@
                                 <ul class="page-pagination section-space--top--30">
                                     {{ with .Prev }}
                                     <li>
-                                        <a href="{{ .URL }}">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="7" style="margin-right: 7px;"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
+                                        <a href="{{ .URL }}" aria-label="Previous page">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="7" style="margin-right: 7px;" aria-hidden="true"><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z"/></svg>
                                             Prev
                                         </a>
                                     </li>
@@ -65,8 +65,8 @@
                                     {{- end }}
                                     {{- with .Next }}
                                     <li>
-                                        <a href="{{ .URL }}">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="7" style="margin-left: 7px;"><path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
+                                        <a href="{{ .URL }}" aria-label="Next page">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512" width="7" style="margin-left: 7px;" aria-hidden="true"><path fill="currentColor" d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z"/></svg>
                                             Next
                                         </a>
                                     </li>
@@ -96,7 +96,7 @@
                             <h3 class="sidebar-title">Latest Posts</h3>
                             {{ range first 3 . }}
                             <div class="sidebar-blog">
-                                <a href="{{ .Permalink }}" class="image"><img src="{{ default $placeholder .Params.cover | relURL }}" alt=""></a>
+                                <a href="{{ .Permalink }}" class="image" aria-label="{{ .Title }}"><img src="{{ default $placeholder .Params.cover | relURL }}" alt="{{ .Title }}"></a>
                                 <div class="content">
                                     <h5><a href="{{ .Permalink }}" style="text-decoration: none; color: inherit;">{{ .Title }}</a></h5>
                                     <span>{{ .Date | time.Format "02 January 2006" }}</span>

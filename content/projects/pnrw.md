@@ -2,7 +2,7 @@
 title: Patio And Retaining Wall
 cover: 'images/projects/pnrw/pnrw-6.jpg'
 weight: 25
-labels: ['landscaping']
+projects: ['landscaping']
 ---
 
 {{< gallery >}}

@@ -2,7 +2,7 @@
 title: Porcelain Patio
 cover: 'images/projects/pp/pp-2.jpg'
 weight: 15
-labels: ['landscaping']
+projects: ['landscaping']
 ---
 
 {{< gallery >}}

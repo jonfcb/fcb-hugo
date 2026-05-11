@@ -2,7 +2,7 @@
 title: Refurbishment
 cover: 'images/projects/refurbishment/refurbishment-5.jpg'
 weight: 24
-labels: ['house extensions']
+projects: ['house extensions']
 ---
 
 {{< gallery >}}

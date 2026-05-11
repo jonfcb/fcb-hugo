@@ -2,7 +2,7 @@
 title: Garden Wall
 cover: 'images/projects/gw/gw-7.jpg'
 weight: 20
-labels: ['landscaping']
+projects: ['landscaping']
 ---
 
 {{< gallery >}}

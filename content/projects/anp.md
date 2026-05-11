@@ -2,7 +2,7 @@
 title: Astroturf and Patio
 cover: 'images/projects/anp/anp-7.jpg'
 weight: 5
-labels: ['landscaping']
+projects: ['landscaping']
 ---
 
 {{< gallery >}}

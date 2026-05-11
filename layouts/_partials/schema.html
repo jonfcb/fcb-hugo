@@ -1,0 +1,141 @@
+{{/* ============================================================
+     JSON-LD Structured Data — Schema.org Markup
+     ============================================================ */}}
+
+{{ $siteURL := site.BaseURL }}
+{{ $orgID   := printf "%s#organization" $siteURL }}
+{{ $siteID  := printf "%s#website" $siteURL }}
+{{ $logo    := dict "@type" "ImageObject" "url" (absURL site.Params.info.logo) "caption" site.Title }}
+
+{{/* ── Collect sameAs social URLs ── */}}
+{{ $sameAs := slice }}
+{{ with site.Params.info.social }}
+  {{ with .facebook }}{{ $sameAs = $sameAs | append . }}{{ end }}
+  {{ with .youtube  }}{{ $sameAs = $sameAs | append . }}{{ end }}
+  {{ with .tiktok   }}{{ $sameAs = $sameAs | append . }}{{ end }}
+{{ end }}
+
+{{/* ── LocalBusiness — every page ── */}}
+{{ $address := dict
+  "@type"           "PostalAddress"
+  "streetAddress"   "59 Anderson Avenue, Earley"
+  "addressLocality" "Reading"
+  "addressRegion"   "Berkshire"
+  "postalCode"      "RG6 1HD"
+  "addressCountry"  "GB"
+}}
+{{ $geo := dict "@type" "GeoCoordinates" "latitude" "51.4543" "longitude" "-0.9781" }}
+{{ $org := dict
+  "@context"   "https://schema.org"
+  "@type"      "HomeAndConstructionBusiness"
+  "@id"        $orgID
+  "name"       site.Title
+  "url"        $siteURL
+  "logo"       $logo
+  "image"      (absURL site.Params.info.logo)
+  "telephone"  site.Params.info.number
+  "email"      site.Params.info.email
+  "address"    $address
+  "geo"        $geo
+  "areaServed" (slice "Reading" "Earley" "Berkshire" "Wokingham" "Bracknell" "Caversham" "Woodley" "Sonning" "Twyford" "Maidenhead")
+  "priceRange" "££"
+  "description" site.Params.seo.description
+  "sameAs"     $sameAs
+}}
+<script type="application/ld+json">{{ $org | jsonify | safeJS }}</script>
+
+{{/* ── WebSite — homepage only ── */}}
+{{ if .IsHome }}
+{{ $website := dict
+  "@context"    "https://schema.org"
+  "@type"       "WebSite"
+  "@id"         $siteID
+  "name"        site.Title
+  "url"         $siteURL
+  "description" site.Params.seo.description
+  "publisher"   (dict "@type" "Organization" "@id" $orgID)
+}}
+<script type="application/ld+json">{{ $website | jsonify | safeJS }}</script>
+{{ end }}
+
+{{/* ── BreadcrumbList — all non-home pages ── */}}
+{{ if not .IsHome }}
+{{ $items := slice (dict "@type" "ListItem" "position" 1 "name" "Home" "item" $siteURL) }}
+{{ $pos := 2 }}
+{{ range .Ancestors.Reverse }}
+  {{ if not .IsHome }}
+    {{ $items = $items | append (dict "@type" "ListItem" "position" $pos "name" .Title "item" .Permalink) }}
+    {{ $pos = add $pos 1 }}
+  {{ end }}
+{{ end }}
+{{ $items = $items | append (dict "@type" "ListItem" "position" $pos "name" .Title) }}
+{{ $breadcrumb := dict
+  "@context"        "https://schema.org"
+  "@type"           "BreadcrumbList"
+  "itemListElement" $items
+}}
+<script type="application/ld+json">{{ $breadcrumb | jsonify | safeJS }}</script>
+{{ end }}
+
+{{/* ── BlogPosting — blog single pages ── */}}
+{{ if and (eq .Type "blog") (not .IsSection) (not .IsHome) }}
+{{ $blogDesc := .Description }}
+{{ if not $blogDesc }}{{ with .Summary }}{{ $blogDesc = truncate 160 (plainify .) }}{{ end }}{{ end }}
+{{ if not $blogDesc }}{{ $blogDesc = site.Params.seo.description }}{{ end }}
+{{ $article := dict
+  "@context"        "https://schema.org"
+  "@type"           "BlogPosting"
+  "@id"             (printf "%s#article" .Permalink)
+  "headline"        .Title
+  "description"     $blogDesc
+  "url"             .Permalink
+  "datePublished"   (.Date.Format "2006-01-02T15:04:05Z07:00")
+  "dateModified"    (.Lastmod.Format "2006-01-02T15:04:05Z07:00")
+  "author"          (dict "@type" "Organization" "name" site.Title "@id" $orgID)
+  "publisher"       (dict "@type" "Organization" "name" site.Title "logo" $logo "@id" $orgID)
+  "mainEntityOfPage" (dict "@type" "WebPage" "@id" .Permalink)
+  "inLanguage"      "en-GB"
+}}
+{{ with .Params.cover }}{{ $article = merge $article (dict "image" (absURL .)) }}{{ end }}
+<script type="application/ld+json">{{ $article | jsonify | safeJS }}</script>
+{{ end }}
+
+{{/* ── Service — service single pages ── */}}
+{{ if and (eq .Type "services") (not .IsSection) }}
+{{ $serviceDesc := .Description }}
+{{ if not $serviceDesc }}{{ with .Summary }}{{ $serviceDesc = truncate 160 (plainify .) }}{{ end }}{{ end }}
+{{ if not $serviceDesc }}{{ $serviceDesc = site.Params.seo.description }}{{ end }}
+{{ $service := dict
+  "@context"    "https://schema.org"
+  "@type"       "Service"
+  "@id"         (printf "%s#service" .Permalink)
+  "name"        .Title
+  "description" $serviceDesc
+  "url"         .Permalink
+  "serviceType" .Title
+  "provider"    (dict "@type" "HomeAndConstructionBusiness" "@id" $orgID "name" site.Title)
+  "areaServed"  (dict "@type" "Place" "name" "Reading, Berkshire, England")
+}}
+{{ with .Params.cover }}{{ $service = merge $service (dict "image" (absURL .)) }}{{ end }}
+<script type="application/ld+json">{{ $service | jsonify | safeJS }}</script>
+{{ end }}
+
+{{/* ── WebPage — project single pages ── */}}
+{{ if and (eq .Type "projects") (not .IsSection) }}
+{{ $projDesc := .Description }}
+{{ if not $projDesc }}{{ with .Summary }}{{ $projDesc = truncate 160 (plainify .) }}{{ end }}{{ end }}
+{{ if not $projDesc }}{{ $projDesc = site.Params.seo.description }}{{ end }}
+{{ $project := dict
+  "@context"    "https://schema.org"
+  "@type"       "WebPage"
+  "@id"         (printf "%s#webpage" .Permalink)
+  "name"        .Title
+  "description" $projDesc
+  "url"         .Permalink
+  "isPartOf"    (dict "@type" "WebSite" "@id" $siteID)
+  "about"       (dict "@type" "HomeAndConstructionBusiness" "@id" $orgID)
+  "inLanguage"  "en-GB"
+}}
+{{ with .Params.cover }}{{ $project = merge $project (dict "primaryImageOfPage" (absURL .)) }}{{ end }}
+<script type="application/ld+json">{{ $project | jsonify | safeJS }}</script>
+{{ end }}

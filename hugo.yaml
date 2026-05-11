@@ -1,12 +1,13 @@
 baseURL: 'https://first-choice-builders.co.uk/'
 languageCode: 'en-us'
-title: 'First Choice Builders'
+title: 'EliteStead'
 enableRobotsTXT: true
 
 taxonomies:
   category: categories
   tag: tags
-  label: labels
+  service: services
+  project: projects
 
 pagination:
   pagerSize: 6
@@ -23,12 +24,12 @@ menus:
       url: '/services/'
       weight: 30
     - name: 'Extensions'
-      url: '/categories/extensions/'
+      url: '/services/extensions/'
       weight: 10
       identifier: services-extension
       parent: Services
     - name: 'Landscaping'
-      url: '/categories/landscaping/'
+      url: '/services/landscaping/'
       weight: 20
       identifier: services-landscaping
       parent: Services
@@ -36,17 +37,17 @@ menus:
       url: '/projects/'
       weight: 40
     - name: 'Extensions'
-      url: '/labels/house-extensions/'
+      url: '/projects/house-extensions/'
       weight: 10
       identifier: projects-extension
       parent: Projects
     - name: 'Landscaping'
-      url: '/labels/landscaping/'
+      url: '/projects/landscaping/'
       weight: 20
       identifier: projects-landscaping
       parent: Projects
     - name: 'Reviews'
-      url: '/labels/reviews/'
+      url: '/reviews/'
       weight: 30
       identifier: projects-review
       parent: Projects
@@ -76,20 +77,27 @@ menus:
       url: '/projects/'
       weight: 30
     - name: 'Reviews'
-      url: '/labels/reviews/'
+      url: '/reviews/'
       weight: 40
 
 params:
+  seo:
+    description: 'Expert house extensions and landscaping services in Reading, Berkshire. EliteStead delivers exceptional craftsmanship with over 9 years of experience transforming homes across Berkshire.'
+    keywords: 'house extensions Reading, landscaping Reading, home extensions Berkshire, loft conversions Reading, patio installation Reading, fencing Reading, garden landscaping Berkshire, EliteStead builders'
+    author: 'EliteStead'
+    og_image: 'images/elitestead-logo.svg'
+    geo:
+      region: 'GB-ENG'
+      placename: 'Reading, Berkshire, England'
+      position: '51.4543;-0.9781'
+      icbm: '51.4543, -0.9781'
   info:
-    logo: 'images/logo.png'
-    footer_logo: 'images/logo.png'
-    number: '+447472801506'
-    text: 'First Choice Builders are committed to meeting the highest quality standards without compromising our safety culture.'
+    logo: 'images/elitestead-logo.svg'
+    footer_logo: 'images/elitestead-logo.svg'
+    number: '+44 7472 801506'
+    company: '14790916'
+    text: '<span class="elite-title">elite<span>stead</span></span> are committed to meeting the highest quality standards without compromising our safety culture.'
     address: '59 Anderson Avenue, Earley, Reading, England, RG6 1HD'
-    email: 'info@firstchoice-builders.co.uk' 
-    social:
-      facebook: 'https://www.facebook.com/profile.php?id=61572755024814'
-      youtube: 'https://www.youtube.com/@first_choice_builders'
-      tiktok: 'https://www.tiktok.com/@first_choice_builders'
-  form_endpoint: https://formsubmit.co/info@firstchoice-builders.co.uk
+    email: 'info@elitestead.co.uk'
+  form_endpoint: https://formsubmit.co/info@elitestead.co.uk
   placeholder: images/placeholder.png

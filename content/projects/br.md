@@ -3,7 +3,7 @@ title: Bathroom Refurbishment
 description: 'This project involved the complete transformation of an outdated bathroom into a sleek and modern space.'
 cover: images/projects/br/br-2.jpg
 weight: 2
-labels: ['house extensions']
+projects: ['house extensions']
 ---
 
 This project involved the complete transformation of an outdated bathroom into a sleek and modern space.

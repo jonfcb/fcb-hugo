@@ -2,7 +2,7 @@
 title: Decking
 cover: 'images/projects/decking/decking-6.jpg'
 weight: 17
-labels: ['landscaping']
+projects: ['landscaping']
 ---
 
 {{< gallery >}}

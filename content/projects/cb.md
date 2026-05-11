@@ -2,7 +2,7 @@
 title: Concrete Base
 cover: 'images/projects/cb/cb-4.jpg'
 weight: 33
-labels: ['landscaping']
+projects: ['landscaping']
 ---
 
 {{< gallery >}}

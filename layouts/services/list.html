@@ -8,49 +8,28 @@
             <div class="container">
 
                 <div class="row">
-                    <div class="col-lg-12">
-                        <div class="service-item-wrapper">
-                            <div class="row">
-                                <div class="col">
-                                    <ul class="page-pagination section-space--bottom--50">
-                                        <li class="label active">
-                                            <a href='{{ site.BaseURL }}services/' role="button">All</a>
-                                        </li>
-                                        {{ range .Site.Taxonomies.categories }}
-                                        {{ $active := eq $.RelPermalink .Page.RelPermalink }}
-                                        <li class="{{ if $active }}active{{ end }} label">
-                                            <a href='{{ .Page.RelPermalink }}' role="button">{{ .Page.LinkTitle }}</a>
-                                        </li>
-                                        {{ end }}
-                                    </ul>
+                    {{ range .Site.Taxonomies.services }}
+                    {{ $link := .Page.Permalink }}
+                    {{ $placeholder := $.Site.Params.placeholder }}
+                    <div class="col-lg-4 col-md-6 col-12 section-space--bottom--30">
+                        <div class="service-grid-item">
+                            <div class="service-grid-item__image">
+                                <div class="service-grid-item__image-wrapper">
+                                    <a href="{{ $link }}" aria-label="{{ .Page.Title }}">
+                                        <img width="370" height="237" src='{{ default $placeholder .Page.Params.cover | relURL }}' class="img-fluid" alt="{{ .Page.Title }}">
+                                    </a>
                                 </div>
                             </div>
-                            <div class="row">
-                                {{ range .Pages.ByDate }}
-                                {{ $link := .Permalink }}
-                                <div class="col-lg-4 col-md-6 col-12 section-space--bottom--30">
-                                    <div class="service-grid-item">
-                                        {{ $placeholder := site.Params.placeholder }}
-                                        <div class="service-grid-item__image">
-                                            <div class="service-grid-item__image-wrapper">
-                                                <a href="{{ $link }}">
-                                                    <img src='{{ default $placeholder .Params.cover | relURL }}' class="img-fluid" alt="">
-                                                </a>
-                                            </div>
-                                        </div>
-                                        <div class="service-grid-item__content">
-                                            <h3 class="title">
-                                                <a href="{{ .Permalink }}">{{ .Title }}</a>
-                                            </h3>
-                                            <p class="subtitle">{{ .Description }}</p>
-                                            <a href="{{ .Permalink }}" class="see-more-link">SEE MORE</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                {{ end }}
+                            <div class="service-grid-item__content">
+                                <h3 class="title">
+                                    <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+                                </h3>
+                                <p class="subtitle">{{ .Page.Description | truncate 100 }}</p>
+                                <a href="{{ .Page.Permalink }}" class="see-more-link" aria-label="See more about {{ .Page.Title }}">SEE MORE</a>
                             </div>
                         </div>
                     </div>
+                    {{ end }}
                 </div>
             </div>
         </div>

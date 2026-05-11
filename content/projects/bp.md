@@ -2,7 +2,7 @@
 title: Block Paving
 cover: 'images/projects/bp/bp-2.jpg'
 weight: 7
-labels: ['landscaping']
+projects: ['landscaping']
 ---
 
 {{< gallery >}}

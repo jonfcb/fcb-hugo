@@ -2,16 +2,17 @@
 title: 'Garden Wall / Retaining Wall'
 description: Add both structure and style to your garden with robust retaining or decorative walls. These installations prevent soil erosion, create visual boundaries, and can serve as attractive focal points in your outdoor design.
 cover: 'images/services/garden-wall-and-retaining-wall.jpg'
-categories: ['landscaping']
+services: ['landscaping']
+weight: 3
 ---
 
 ### Overview
 Add both structure and style to your garden with robust retaining or decorative walls. These installations prevent soil erosion, create visual boundaries, and can serve as attractive focal points in your outdoor design.
 
 ### Key Features
-- **Engineering & Design:** We carefully calculate retaining wall heights, load-bearing capacity, and drainage requirements.
+- **Engineering & Design:** We carefully calculate retaining wall heights, load bearing capacity, and drainage requirements.
 - **Material Versatility:** Brick, natural stone, timber sleepers, and modern block options accommodate a range of aesthetics.
-- **Water Management:** Built-in drainage solutions to protect against water pressure build-up behind the wall.
+- **Water Management:** Built in drainage solutions to protect against water pressure build up behind the wall.
 
 ### Project Stages
 - **Site Analysis:** We evaluate ground conditions and topography to design stable foundations.

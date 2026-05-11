@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
 /*=============================================
 =            CSS Index            =
 =============================================
@@ -5724,7 +5725,9 @@ input::placeholder {
     margin-bottom: 0;
   }
 }
-
+.footer-area {
+  border-top: 1px solid rgb(235, 235, 235);
+}
 .footer-logo {
   margin-bottom: 35px;
 }
@@ -5738,7 +5741,7 @@ input::placeholder {
 }
 
 .footer-desc {
-  color: #c7c7c7;
+  /* color: #c7c7c7; */
   max-width: 370px;
   font-family: "Poppins", sans-serif;
   font-size: 14px;
@@ -5768,7 +5771,6 @@ input::placeholder {
   }
 }
 .footer-widget__title {
-  color: #fff;
   margin-bottom: 50px;
   font-size: 18px;
 }
@@ -5796,7 +5798,7 @@ input::placeholder {
 }
 .footer-widget__navigation li a {
   font-size: 14px;
-  color: #c7c7c7;
+  /* color: #c7c7c7; */
   -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
   line-height: 2;
@@ -5808,7 +5810,7 @@ input::placeholder {
   color: #E11A22;
 }
 .footer-widget__content {
-  color: #c7c7c7;
+  /* color: #c7c7c7; */
   font-size: 14px;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
@@ -5823,7 +5825,7 @@ input::placeholder {
 
 .footer-copyright-wrapper {
   padding: 15px 0;
-  color: #c7c7c7;
+  /* color: #c7c7c7; */
   border-top: 1px solid #4a4a4a;
   font-size: 12px;
 }
@@ -6763,7 +6765,7 @@ a.scroll-top.show {
   -webkit-transform: translateY(-50%) scale(1.1);
           transform: translateY(-50%) scale(1.1);
 }
-.cta-video-image:after {
+/* .cta-video-image:after {
   content: "";
   width: 100%;
   height: 100%;
@@ -6773,7 +6775,7 @@ a.scroll-top.show {
   top: 20px;
   left: 20px;
   z-index: -1;
-}
+} */
 
 /*=====  End of video cta  ======*/
 /*=============================================
@@ -8487,3 +8489,14 @@ blockquote.blockquote .author {
 }
 
 /*=====  End of contact  ======*/
+
+/*=====  custom  ======*/
+.elite-title {
+  text-transform: uppercase;
+  color: #A9291A;
+  font-family: "Cinzel", serif;
+}
+.elite-title span {
+  color: #152A4C;
+}
+/*=====  End of custom  ======*/

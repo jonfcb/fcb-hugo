@@ -3,7 +3,7 @@ title: Front Porch Construction & Renovation
 description: This project involved the complete design and construction of a modern front porch. The transformation showcases a blend of functionality and aesthetics while maintaining harmony with the existing brickwork of the property.
 cover: 'images/projects/fpc/fpc-5.jpg'
 weight: 31
-labels: ['house extensions']
+projects: ['house extensions']
 ---
 
 This project involved the complete design and construction of a modern front porch. The transformation showcases a blend of functionality and aesthetics while maintaining harmony with the existing brickwork of the property.
@@ -16,7 +16,7 @@ A sturdy brick framework was meticulously built to match the original house’s 
 
 **Finishing Touches**
 The entrance door was upgraded to a bold and elegant navy blue, flanked by frosted glass panels, allowing natural light while maintaining privacy.
-The internal area was completed with polished marble-effect tiles, creating a clean and modern entryway that complements the home’s interior.
+The internal area was completed with polished marble effect tiles, creating a clean and modern entryway that complements the home’s interior.
 Decorative elements, such as a traditional outdoor lamp and house number plaque, add character and charm.
 
 **Landscaping**

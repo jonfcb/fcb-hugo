@@ -2,7 +2,8 @@
 title: 'House Extensions'
 description: Unlock the full potential of your home by adding functional, stylish living areas. Our house extensions are meticulously designed to integrate harmoniously with your property’s existing structure and aesthetic.
 cover: 'images/services/house-extensions.jpg'
-categories: ['extensions']
+services: ['extensions']
+weight: 1
 ---
 
 ### Overview
@@ -10,8 +11,8 @@ Unlock the full potential of your home by adding functional, stylish living area
 
 ### Key Features
 - **Architectural Integrity:** We work with experienced architects and structural engineers to ensure the new extension complements your home’s design, complies with local building regulations, and maintains structural stability.
-- **Custom Design Process:** From open-plan kitchens to additional bedrooms, we focus on your specific needs—space optimization, light distribution, and energy efficiency.
-- **High-Quality Materials:** We source premium materials—such as high-grade timber, bricks, or steel frames—to ensure durability and sustainability.
+- **Custom Design Process:** From open plan kitchens to additional bedrooms, we focus on your specific needs—space optimization, light distribution, and energy efficiency.
+- **High Quality Materials:** We source premium materials—such as high grade timber, bricks, or steel frames—to ensure durability and sustainability.
 
 ### Project Stages
 - **Initial Consultation:** We discuss your vision, assess feasibility, and provide a rough cost estimate.
@@ -26,6 +27,6 @@ Finishing & Handover: Final touches such as painting, flooring, and fixtures are
 Finishing & Handover: Final touches such as painting, flooring, and fixtures are completed to your specifications, ensuring your new space is ready for immediate use.
 
 ### Warranty & Guarantees
-- **Structural Warranty (12–36+ months):** Coverage against major structural issues resulting from workmanship.
+- **Structural Warranty 20 years:** Coverage against major structural issues resulting from workmanship.
 - **Material Warranties:** Manufacturer guarantees on roofing, windows, insulation, and any additional components.
-- **Post-Completion Support:** We offer maintenance guidance and remain available to address any concerns that arise after project completion.
+- **Post Completion Support:** We offer maintenance guidance and remain available to address any concerns that arise after project completion.

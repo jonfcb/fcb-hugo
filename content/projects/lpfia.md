@@ -2,7 +2,7 @@
 title: Installation of 40m² Of Astroturf
 cover: 'images/projects/lpfia/lpfia-2.jpg'
 weight: 27
-labels: ['landscaping']
+projects: ['landscaping']
 ---
 
 {{< gallery >}}

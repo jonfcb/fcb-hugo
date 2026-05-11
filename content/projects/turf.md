@@ -2,7 +2,7 @@
 title: Turf
 cover: 'images/projects/turf/turf-3.jpg'
 weight: 14
-labels: ['landscaping']
+projects: ['landscaping']
 ---
 
 {{< gallery >}}
