@@ -525,3 +525,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,t
   .es-cta-band .es-button { margin-top: 22px; }
   .es-category-links a { padding: 10px 14px; }
 }
+
+.es-article { font-size: 17px; line-height: 1.85; }
+.es-article h2 { margin-top: 36px; }
+.es-article h3 { color: var(--es-navy); font-size: 24px; margin-top: 28px; }
+.es-article img { max-width: 100%; height: auto; }
+.es-article + .es-category-links { margin-top: 32px; }

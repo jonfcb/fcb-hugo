@@ -5,7 +5,7 @@
       <div class="es-card-body">
         <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
         {{ with .Description }}<p>{{ . | truncate 150 }}</p>{{ end }}
-        <a class="es-text-link" href="{{ .RelPermalink }}">{{ if eq .Section "projects" }}View project and photographs{{ else }}Explore service{{ end }} →</a>
+        <a class="es-text-link" href="{{ .RelPermalink }}">{{ if eq .Section "projects" }}View project and photographs{{ else if eq .Section "blog" }}Read article{{ else }}Explore service{{ end }} →</a>
       </div>
     </article>
   {{ end }}
