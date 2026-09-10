@@ -5,6 +5,7 @@
 {{ $swiper := resources.Get "css/plugins/swiper.min.css" }}
 {{ $markdown := resources.Get "css/plugins/markdown.css" }}
 
-{{ $styles := slice $markdown $bootstrap $animate $lightgallery $swiper $main | resources.Concat "css/bundle.css" }}
+{{ $enquiries := resources.Get "css/enquiries.css" }}
+{{ $styles := slice $markdown $bootstrap $animate $lightgallery $swiper $main $enquiries | resources.Concat "css/bundle.css" }}
 {{ $styles := $styles | minify }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}">

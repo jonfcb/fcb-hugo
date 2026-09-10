@@ -1,0 +1,9 @@
+<section id="enquiry" class="es-section"><div class="container es-enquiry">
+<div><p class="es-eyebrow">Let’s talk about your project</p><h2>{{ .heading }}</h2><p>Tell us what you have planned, where the property is and when you would like to start. We can discuss the next steps towards a quotation.</p><p>Already have drawings? Email them directly to <a class="es-text-link" href="mailto:{{ site.Params.info.email }}">{{ site.Params.info.email }}</a>.</p><p>Prefer to speak to us?<br><a class="es-text-link" href="tel:{{ replace site.Params.info.number " " "" }}">{{ site.Params.info.number }}</a></p></div>
+<form class="es-form" action="{{ site.Params.form_endpoint }}" method="post">
+<input type="hidden" name="_subject" value="{{ .subject }}">
+<div class="es-form-pair"><div><label for="enquiry-name">Your name <span>(required)</span></label><input id="enquiry-name" name="name" autocomplete="name" required></div><div><label for="enquiry-email">Email <span>(required)</span></label><input id="enquiry-email" name="email" type="email" autocomplete="email" required></div></div>
+<div class="es-form-pair"><div><label for="enquiry-phone">Phone <span>(optional)</span></label><input id="enquiry-phone" name="phone" type="tel" autocomplete="tel"></div><div><label for="enquiry-postcode">Project postcode <span>(required)</span></label><input id="enquiry-postcode" name="postcode" autocomplete="postal-code" required></div></div>
+<label for="enquiry-message">Tell us about your project <span>(required)</span></label><textarea id="enquiry-message" name="message" rows="4" placeholder="What would you like to build? Do you have drawings, and a preferred start date?" required></textarea>
+<p class="es-form-note">Your enquiry is sent through FormSubmit to EliteStead so we can reply about your project.</p><button class="es-button" type="submit">Send my enquiry</button>
+</form></div></section>
