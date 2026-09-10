@@ -1,5 +1,5 @@
 ---
 title: House Extensions
-description: 'Whether you’re looking to add a new room, expand your living space, or create a home office, we bring your vision to life with creative designs and impeccable craftsmanship'
-cover: 'images/services/extensions.svg'
+description: 'Explore our house extension work, from construction through to completed kitchens and living spaces.'
+cover: 'images/projects/mke/mke-4.webp'
 ---

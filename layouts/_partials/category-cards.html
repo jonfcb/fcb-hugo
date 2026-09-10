@@ -1,0 +1,14 @@
+<div class="es-grid es-two">
+  {{ range . }}
+    {{ with .Page }}
+      <article class="es-card">
+        <a href="{{ .RelPermalink }}"><img src="{{ .Params.cover | relURL }}" alt="{{ .Title }} by EliteStead" width="600" height="420" loading="lazy"></a>
+        <div class="es-card-body">
+          <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+          <p>{{ .Description }}</p>
+          <a class="es-text-link" href="{{ .RelPermalink }}">Explore {{ .Title | lower }} →</a>
+        </div>
+      </article>
+    {{ end }}
+  {{ end }}
+</div>

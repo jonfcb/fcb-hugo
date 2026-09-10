@@ -1,5 +1,5 @@
 ---
 title: Landscaping
-description: 'Transform your outdoor space with customized designs, from patios and gardens to driveways and more.'
-cover: 'images/services/landscaping.svg'
+description: 'Explore patios, paving, garden walls and outdoor spaces created by EliteStead.'
+cover: 'images/projects/pp/pp-2.JPG'
 ---

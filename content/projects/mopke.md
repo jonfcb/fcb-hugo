@@ -14,8 +14,8 @@ This project highlights the journey from construction to a contemporary and func
 - Construction Process: Carefully planned phases ensured structural integrity while delivering modern aesthetics. This extension is a perfect example of combining innovative design with practical living.
 
 {{< gallery >}}
-{{< gallery-item image="images/projects/mopke/mopke-1.jpg" >}}
 {{< gallery-item image="images/projects/mopke/mopke-2.jpg" >}}
+{{< gallery-item image="images/projects/mopke/mopke-1.jpg" >}}
 {{< gallery-item image="images/projects/mopke/mopke-3.jpg" >}}
 {{< gallery-item image="images/projects/mopke/mopke-4.jpg" >}}
 {{< gallery-item image="images/projects/mopke/mopke-5.jpg" >}}
