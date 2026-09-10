@@ -1,0 +1,4 @@
+<div class="es-grid es-projects">
+{{ range . }}{{ with site.GetPage . }}
+<article class="es-card"><a href="{{ .RelPermalink }}"><img src="{{ .Params.cover | relURL }}" alt="{{ .Title }}" loading="lazy" width="600" height="420"></a><div class="es-card-body"><p class="es-eyebrow">Completed extension</p><h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3><a class="es-text-link" href="{{ .RelPermalink }}">View project and photographs <span aria-hidden="true">→</span></a></div></article>
+{{ end }}{{ end }}</div>

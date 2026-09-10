@@ -23,7 +23,7 @@ Decorative elements, such as a traditional outdoor lamp and house number plaque,
 The surrounding area was re-paved to align with the new design, ensuring smooth access and enhancing curb appeal. Additional greenery and flowerpots further beautify the entry.
 
 {{< gallery >}}
-{{< gallery-item image="images/projects/fpc/fpc-1.jpg" >}}
+{{< gallery-item image="images/projects/fpc/fpc-1.JPG" >}}
 {{< gallery-item image="images/projects/fpc/fpc-2.jpg" >}}
 {{< gallery-item image="images/projects/fpc/fpc-3.jpg" >}}
 {{< gallery-item image="images/projects/fpc/fpc-4.jpg" >}}

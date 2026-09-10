@@ -2,7 +2,7 @@
 title: Modern Kitchen Extension
 description: A modern rear kitchen extension transformed from the original house into a bright open plan living space with large glazing, rooflights, patio access and a high quality internal finish.
 cover: 'images/projects/mke/mke-4.webp'
-weight: -2
+weight: -30
 projects: ['house extensions']
 ---
 
