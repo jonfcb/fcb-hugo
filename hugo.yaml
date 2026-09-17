@@ -1,5 +1,5 @@
-baseURL: 'http://elitestead.co.uk/'
-languageCode: 'en-us'
+baseURL: 'https://elitestead.co.uk/'
+languageCode: 'en-GB'
 title: 'EliteStead'
 enableRobotsTXT: true
 
@@ -60,10 +60,10 @@ menus:
 
   services:
     - name: 'Landscaping'
-      url: '/categories/landscaping/'
+      url: '/services/landscaping/'
       weight: 10
     - name: 'House Extensions'
-      url: '/categories/extensions/'
+      url: '/services/house-extensions/'
       weight: 20
 
   links:

@@ -1,0 +1,8 @@
+{{ if gt .TotalPages 1 }}
+<nav class="es-pagination" aria-label="Page navigation">
+  {{ $current := .PageNumber }}
+  {{ with .Prev }}<a href="{{ .URL }}" aria-label="Previous page">Previous</a>{{ end }}
+  {{ range .Pagers }}<a href="{{ .URL }}" aria-label="Page {{ .PageNumber }}" {{ if eq .PageNumber $current }}aria-current="page"{{ end }}>{{ .PageNumber }}</a>{{ end }}
+  {{ with .Next }}<a href="{{ .URL }}" aria-label="Next page">Next</a>{{ end }}
+</nav>
+{{ end }}

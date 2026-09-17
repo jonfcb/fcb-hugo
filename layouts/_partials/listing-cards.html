@@ -1,0 +1,12 @@
+<div class="es-grid es-projects">
+  {{ range . }}
+    <article class="es-card">
+      <a href="{{ .RelPermalink }}"><img src="{{ default site.Params.placeholder .Params.cover | relURL }}" alt="{{ .Title }}" width="600" height="420" loading="lazy"></a>
+      <div class="es-card-body">
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        {{ with .Description }}<p>{{ . | truncate 150 }}</p>{{ end }}
+        <a class="es-text-link" href="{{ .RelPermalink }}">{{ if eq .Section "projects" }}View project and photographs{{ else if eq .Section "blog" }}Read article{{ else }}Explore service{{ end }} →</a>
+      </div>
+    </article>
+  {{ end }}
+</div>

@@ -5,6 +5,8 @@
 {{ $swiper := resources.Get "css/plugins/swiper.min.css" }}
 {{ $markdown := resources.Get "css/plugins/markdown.css" }}
 
-{{ $styles := slice $markdown $bootstrap $animate $lightgallery $swiper $main | resources.Concat "css/bundle.css" }}
-{{ $styles := $styles | minify }}
+{{ $enquiries := resources.Get "css/enquiries.css" }}
+{{ $signature := resources.Get "css/signature.css" }}
+{{ $styles := slice $markdown $bootstrap $animate $lightgallery $swiper $main $enquiries $signature | resources.Concat "css/bundle.css" }}
+{{ $styles := $styles | minify | fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}">

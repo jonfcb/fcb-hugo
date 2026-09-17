@@ -1,18 +1,4 @@
 {{ define "main" }}
-<!--====================  breadcrumb area ====================-->
-{{ partial "hero.html" . }}
-<!--====================  End of breadcrumb area  ====================-->
-<div class="page-wrapper section-space--top--30">
-    <!--Projects section start-->
-    <div class="project-section">
-        <div class="container">
-            <div class="row">
-                <div class="content col-12 section-space--bottom--30 text-center">
-                    <h2><a href="{{ site.BaseURL }}" style="color: #E11A22; text-underline-offset: 4px;">Go Home</a></h2>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--Projects section end-->
-</div>
+<section class="es-page-heading"><div class="container"><p class="es-eyebrow">Page not found</p><h1>Let’s get you back on track</h1><p>The page you requested may have moved. Explore our services or get in touch about your project.</p><div class="es-actions"><a class="es-button" href="{{ site.Home.RelPermalink }}">Go to the homepage</a><a class="es-button es-button-outline" href="{{ "services/" | relURL }}">Explore our services</a></div></div></section>
+{{ partial "project-enquiry.html" . }}
 {{ end }}

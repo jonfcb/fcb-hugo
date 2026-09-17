@@ -1,32 +1,19 @@
 ---
-title: 'House Extensions'
-description: Unlock the full potential of your home by adding functional, stylish living areas. Our house extensions are meticulously designed to integrate harmoniously with your property’s existing structure and aesthetic.
-cover: 'images/services/house-extensions.jpg'
+title: House Extensions
+layout: extensions
+description: "Planning a house extension in Reading or Berkshire? View EliteStead extension projects, read customer feedback and enquire about your plans."
+cover: images/projects/mke/mke-4.webp
 services: ['extensions']
 weight: 1
 ---
+### 1. Talk through your plans
+Tell us about the space you want to create, your property and your preferred timing. If you already have drawings, send them over so we can discuss the proposed work.
 
-### Overview
-Unlock the full potential of your home by adding functional, stylish living areas. Our house extensions are meticulously designed to integrate harmoniously with your property’s existing structure and aesthetic.
+### 2. Agree the scope
+Discuss what needs to be included in the quotation, the finishes you want and the information needed before work can begin.
 
-### Key Features
-- **Architectural Integrity:** We work with experienced architects and structural engineers to ensure the new extension complements your home’s design, complies with local building regulations, and maintains structural stability.
-- **Custom Design Process:** From open plan kitchens to additional bedrooms, we focus on your specific needs—space optimization, light distribution, and energy efficiency.
-- **High Quality Materials:** We source premium materials—such as high grade timber, bricks, or steel frames—to ensure durability and sustainability.
+### 3. Build and finish
+Our extension projects include work from foundations and structural construction through to roofing and internal finishes. We will discuss the scope for your particular project.
 
-### Project Stages
-- **Initial Consultation:** We discuss your vision, assess feasibility, and provide a rough cost estimate.
-- **Design & Planning Permission:** Our team creates detailed plans and handles necessary permits or approval processes.
-- **Construction & Quality Checks:** Skilled craftsmen undertake each phase of construction, with regular site inspections to guarantee quality control.
-Finishing & Handover: Final touches such as painting, flooring, and fixtures are completed to your specifications, ensuring your new space is ready for immediate use.
-
-### Project Stages
-- **Initial Consultation:** We discuss your vision, assess feasibility, and provide a rough cost estimate.
-- **Design & Planning Permission:** Our team creates detailed plans and handles necessary permits or approval processes.
-- **Construction & Quality Checks:** Skilled craftsmen undertake each phase of construction, with regular site inspections to guarantee quality control.
-Finishing & Handover: Final touches such as painting, flooring, and fixtures are completed to your specifications, ensuring your new space is ready for immediate use.
-
-### Warranty & Guarantees
-- **Structural Warranty 20 years:** Coverage against major structural issues resulting from workmanship.
-- **Material Warranties:** Manufacturer guarantees on roofing, windows, insulation, and any additional components.
-- **Post Completion Support:** We offer maintenance guidance and remain available to address any concerns that arise after project completion.
+### 4. Review the completed work
+Walk through the finished project together and discuss any remaining details and aftercare.

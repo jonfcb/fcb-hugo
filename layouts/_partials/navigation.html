@@ -1,0 +1,7 @@
+<nav aria-label="{{ .label }}"><ul class="es-nav-list">
+{{ range site.Menus.main }}
+<li>{{ if .HasChildren }}<details class="es-dropdown"><summary>{{ .Name }}</summary><ul>
+<li><a href="{{ .URL | relURL }}">All {{ .Name | lower }}</a></li>
+{{ range .Children }}<li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>{{ end }}
+</ul></details>{{ else }}<a href="{{ .URL | relURL }}">{{ .Name }}</a>{{ end }}</li>
+{{ end }}</ul></nav>
